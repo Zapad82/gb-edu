@@ -6,7 +6,7 @@ import java.util.Scanner;
 // Задача 0. 
 // Вывести приветствие
 // Вывести текущее время
-class hello {
+class seminar1_231122 {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         
@@ -22,7 +22,7 @@ class hello {
 // Задача 1.
 // Написать программу, которая запросит пользователя ввести <Имя> в консоли. 
 // Получит введенную строку и выведет в консоль сообщение “Привет, <Имя>!”
-class Programm_poluchenie_dannyh {
+class Hello_name {
     public static void main(String[] args) {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите Ваше имя: ");
@@ -40,7 +40,7 @@ class Programm_poluchenie_dannyh {
 // "Добрый день, <Имя>!", если время от 12:00 до 17:59;
 // "Добрый вечер, <Имя>!", если время от 18:00 до 22:59;
 // "Доброй ночи, <Имя>!", если время от 23:00 до 4:59
-class Programm_poluchenie_dannyh_ot_vremeni {
+class Poluchenie_dannyh_ot_vremeni {
     public static void main(String[] args) {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("Введите Ваше имя: ");
