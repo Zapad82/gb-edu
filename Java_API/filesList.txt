@@ -1,0 +1,8 @@
+notes3.txt
+filesList.txt
+lection2_241122.java
+log.txt
+hw_seminar1.java
+seminar1_231122.java
+program.java
+seminar2_251122.java
