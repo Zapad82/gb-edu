@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
-public class seminar2_241122 {
+public class lection2_241122 {
     public static void main(String[] args) {
         String[] name = { "C", "е", "р", "г", "е", "й" };
         String sk = "СЕРГЕЙ КА.";
