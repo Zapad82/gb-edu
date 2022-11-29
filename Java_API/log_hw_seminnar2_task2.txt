@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T04:35:44.945969Z</date>
+  <millis>1669696544945</millis>
+  <nanos>969000</nanos>
+  <sequence>0</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.149348Z</date>
+  <millis>1669696545149</millis>
+  <nanos>348000</nanos>
+  <sequence>1</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.153080Z</date>
+  <millis>1669696545153</millis>
+  <nanos>80000</nanos>
+  <sequence>2</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.156412Z</date>
+  <millis>1669696545156</millis>
+  <nanos>412000</nanos>
+  <sequence>3</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.160871Z</date>
+  <millis>1669696545160</millis>
+  <nanos>871000</nanos>
+  <sequence>4</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.170096Z</date>
+  <millis>1669696545170</millis>
+  <nanos>96000</nanos>
+  <sequence>5</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.171489Z</date>
+  <millis>1669696545171</millis>
+  <nanos>489000</nanos>
+  <sequence>6</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.174002Z</date>
+  <millis>1669696545174</millis>
+  <nanos>2000</nanos>
+  <sequence>7</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.176958Z</date>
+  <millis>1669696545176</millis>
+  <nanos>958000</nanos>
+  <sequence>8</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.186019Z</date>
+  <millis>1669696545186</millis>
+  <nanos>19000</nanos>
+  <sequence>9</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+<record>
+  <date>2022-11-29T04:35:45.189323Z</date>
+  <millis>1669696545189</millis>
+  <nanos>323000</nanos>
+  <sequence>10</sequence>
+  <logger>hw_seminar2</logger>
+  <level>INFO</level>
+  <class>bubbleSort</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Новая итерация</message>
+</record>
+</log>

@@ -1,4 +1,7 @@
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.XMLFormatter;
 
@@ -154,7 +157,7 @@ class plusiki {
 // Если можно избежать try catch, то лучше это сделать
 
 // ФУНКЦИОНАЛ РАБОТЫ С ФАЙЛОВОЙ СИСТЕМОЙ
-//isHidden(): возвращает истину, если каталог или файл является скрытым
+// isHidden(): возвращает истину, если каталог или файл является скрытым
 // length(): возвращает размер файла в байтах
 // lastModified(): возвращает время последнего изменения файла или каталога
 // list(): возвращает массив файлов и подкаталогов, которые находятся в каталоге
@@ -298,23 +301,23 @@ class plusiki {
 // import java.io.IOException;
 // import java.util.logging.*;
 
-// public class Ex005_Logger {
-//     public static void main(String[] args) throws IOException {
+class Ex005_Logger {
+    public static void main(String[] args) throws IOException {
     
-//         Logger logger = Logger.getLogger(Ex005_Logger.class.getName());
-//         //ConsoleHandler ch = new ConsoleHandler();
-//         FileHandler fh = new FileHandler("log.txt");
-//         //logger.addHandler(ch);
-//         logger.addHandler(fh);
+        Logger logger = Logger.getLogger(Ex005_Logger.class.getName());
+        //ConsoleHandler ch = new ConsoleHandler();
+        FileHandler fh = new FileHandler("log.txt");
+        //logger.addHandler(ch);
+        logger.addHandler(fh);
         
-//         SimpleFormatter sFormat = new SimpleFormatter();
-//         //XMLFormatter xml = new XMLFormatter();
-//         fh.setFormatter(sFormat);
-//         //fh.setFormatter(xml);
+        // SimpleFormatter sFormat = new SimpleFormatter();
+        // //XMLFormatter xml = new XMLFormatter();
+        // fh.setFormatter(sFormat);
+        // //fh.setFormatter(xml);
         
-//         //logger.setLevel(Level.INFO);
-//         logger.log(Level.WARNING, "Тестовое логирование 1");
-//         logger.info("Тестовое логирование 2");
+        logger.setLevel(Level.INFO);
+        logger.log(Level.WARNING, "Тестовое логирование 1");
+        logger.info("Тестовое логирование 2");
 
-//     }
-// }
+    }
+}
