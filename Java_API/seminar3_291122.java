@@ -1,8 +1,11 @@
 import java.security.Provider;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import classes.IntegerComparator;
 
 // Даны следующие строки, cравнить их с помощью == и метода equals() класса Object
 // String s1 = "hello";
@@ -40,6 +43,7 @@ public class seminar3_291122 {
 // Отсортировать список методом sort() и вывести его на экран.
 class randomDec {
     public static void main(String[] args) {
+        IntegerComparator ic = new IntegerComparator(); // для решения с компоратором
         ArrayList<Integer> my_list = new ArrayList<>();
         Random rand = new Random();
 
@@ -47,9 +51,13 @@ class randomDec {
             int temp = rand.nextInt(100);
             my_list.add(temp);
         }
+
+
+        my_list.sort(ic);
         System.out.println(my_list);
-        my_list.sort(null);
-        System.out.println(my_list);
+        // System.out.println(my_list); // для решения без компоратора
+        // my_list.sort(null);
+        // System.out.println(my_list);
     }
 }
 
@@ -69,6 +77,7 @@ class task2_1 {
         Random rand = new Random();
         ArrayList<String> final_list = new ArrayList<>();
 
+
         for (int i = 0; i < 20; i++) {
             int index = rand.nextInt(my_list.size());
             String planet = my_list.get(index);
@@ -76,16 +85,37 @@ class task2_1 {
         }
         System.out.println(final_list);
 
-        for (int i = 0; i < final_list.size(); i++) {
-            if (final_list.get(i).equals(my_list.get(i+1))) {
+        final_list.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
 
+        int count = 1;
+        for (int i = 0; i < final_list.size()-1; i++) {
+            String str = final_list.get(i);
+            if (final_list.get(i).equals(final_list.get(i+1))) {
+                count++;
+            } else {
+                System.out.println(str + " " + count);
+                count = 1;
             }
         }
+        System.out.println(final_list.get(final_list.size() - 1) + " " + count);
+        // Задание 2.2
+        // Пройти по списку из предыдущего задания и удалить повторяющиеся элементы.
+        for (int i = 1; i < final_list.size(); i++) {
+            if(final_list.get(i).equals(final_list.get(i-1))) {
+                final_list.remove(i);
+                i--;
+            }
+        }
+        System.out.println(final_list);
     }
 }
 
-// Задание 2.2
-// Пройти по списку из предыдущего задания и удалить повторяющиеся элементы.
+
 
 
 // Задание 3
