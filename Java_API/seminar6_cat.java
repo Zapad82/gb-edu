@@ -1,4 +1,4 @@
-public class semibar6_cat {
+public class seminar6_cat {
         private String name;
         private String owner;
         private String breed;
