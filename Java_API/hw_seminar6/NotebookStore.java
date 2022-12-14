@@ -14,53 +14,25 @@
 
 // Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям.
 
-
-
 package hw_seminar6;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class NotebookStore {
-    private static Scanner input = new Scanner (System.in);
+
     public static void main(String[] args) {
-        Notebooks asus512 = new Notebooks("Asus 512", 12, 512, "Windows 10", "white", 600.52f);
-        asus512.addProcessorNotebook(new ProcessorNotebook("Intel Core I5", 32000));
-        // System.out.println(asus512);
+        HashSet<Notebook> notebook = new HashSet<>();
+        notebook.add(new Notebook("Dell", 8, 256, "Windows", "Core I3", "Black", 325.99f));
+        notebook.add(new Notebook("Sony Vaio", 16, 256, "Windows", "Core I5", "Silver", 500.99f));
+        notebook.add(new Notebook("Asus", 16, 1024, "Windows", "Core I9", "Black", 775.99f));
+        notebook.add(new Notebook("Apple", 8, 256, "MacOs", "Intel", "White", 620f));
+        notebook.add(new Notebook("Dell", 8, 256, "Linux", "Core I3", "Black", 325.99f));
+        notebook.add(new Notebook("Asus", 8, 256, "Windows", "Core I5", "Black", 400.99f));
+        notebook.add(new Notebook("Samsung", 8, 256, "Windows", "Core I5", "Silver", 465.99f));
 
-        Notebooks sony264 = new Notebooks("Sony 264", 4, 264, "Windows 10", "black", 200.10f);
-        sony264.addProcessorNotebook(new ProcessorNotebook("Intel Core I3", 24000));
-        // System.out.println(sony264);
+        System.out.println((Notebook.filterNotebooks(Notebook.filter(), notebook)));
+        ;
+        // System.out.println(Laptop.filterLaptops(Laptop.filter(), laptopList));;
 
-        Notebooks htc512 = new Notebooks("HTC 512", 16, 512, "Windows 11", "black", 1200.99f);
-        htc512.addProcessorNotebook(new ProcessorNotebook("Intel Core I9", 72000));
-        // System.out.println(htc512);
-
-        Notebooks hp = new Notebooks("HP 264", 4, 512, "Windows 11", "black", 550.99f);
-        hp.addProcessorNotebook(new ProcessorNotebook("Intel Core I5", 48000));
-        // System.out.println(hp);
-
-        System.out.println("Хотите ли Вы искать ноутбук по объему ОЗУ? (y/n)");
-        String userChoiceMemory = input.nextLine().toLowerCase().toString(); 
-        if (userChoiceMemory == "y") {
-            System.out.println("Сколько минимально памяти нужно?");
-            int userChoiceMemorySize = input.nextInt();
-            System.out.println(userChoiceMemorySize);
-        }
-        // else {
-        //     continue;
-        // }
-        
-        System.out.println("Вы хотите указать объем жёсткого диска? (y/n)");
-        String userChoiceHarddisk = input.nextLine();
-        if (userChoiceHarddisk == "y") {
-            System.out.println("Какой минимальный объем жесткого диска должен быть?");
-            String userChoiceHarddiskSize = input.nextLine();
-            System.out.println(userChoiceHarddiskSize);
-        }
-        // else {
-        //     continue;
-        // }    
     }
 }
-
-
