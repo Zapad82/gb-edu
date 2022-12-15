@@ -106,6 +106,19 @@ public class Notebook {
         return true;
     }
 
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "Вам подойдёт: " + name +
+                ", Объем оперативной памяти: " + memory +
+                "Гб, Объем жесткого диска: " + harddisk +
+                "Гб, Операционная система: " + os +
+                ", Процессор: " + processorsNotebooks +
+                ", Цвет: " + color +
+                ", Цена:" + price +
+                '$' + "\n";
+    }
+
     public static ArrayList<String> filter() {
         TreeMap<Integer, String> filterParameter = new TreeMap<>();
         filterParameter.put(1, "производителя ноутбука");

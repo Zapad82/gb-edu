@@ -30,8 +30,12 @@ public class NotebookStore {
         notebook.add(new Notebook("Asus", 8, 256, "Windows", "Core I5", "Black", 400.99f));
         notebook.add(new Notebook("Samsung", 8, 256, "Windows", "Core I5", "Silver", 465.99f));
 
-        System.out.println((Notebook.filterNotebooks(Notebook.filter(), notebook)));
-        ;
+        System.out.println(Notebook.filterNotebooks(Notebook.filter(), notebook).toString());
+
+        // HashSet<Notebook> array1 = (Notebook.filterNotebooks(Notebook.filter(),
+        // notebook));
+        // System.out.println(Arrays.toString(array1));
+
         // System.out.println(Laptop.filterLaptops(Laptop.filter(), laptopList));;
 
     }
