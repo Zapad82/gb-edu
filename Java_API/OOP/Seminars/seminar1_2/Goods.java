@@ -16,6 +16,9 @@ public class Goods {
         this.amount = amount;
     }
 
+    public Goods(String name2) {
+    }
+
     public int getAmount() {
         return amount;
     }
@@ -50,10 +53,13 @@ public class Goods {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Goods goods = (Goods) o;
-        return artikl == goods.artikl && Float.compare(goods.price, price) == 0 && amount == goods.amount && Objects.equals(name, goods.name);
+        return artikl == goods.artikl && Float.compare(goods.price, price) == 0 && amount == goods.amount
+                && Objects.equals(name, goods.name);
     }
 
     @Override

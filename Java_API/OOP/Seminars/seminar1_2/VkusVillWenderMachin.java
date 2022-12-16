@@ -58,4 +58,7 @@ public class VkusVillWenderMachin extends WenderMachin {
         goods.setAmount(amountGoods - 1);
         System.out.println("Количество товара " + goods.getAmount());
     }
+
+    public void addProduct() {
+    }
 }
