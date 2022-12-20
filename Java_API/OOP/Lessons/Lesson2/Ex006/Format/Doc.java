@@ -1,12 +1,12 @@
-package Lesson_08.Ex006.Format;
+package OOP.Lessons.Lesson2.Ex006.Format;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-import Lesson_08.Ex006.Document.TextDocument;
+import OOP.Lessons.Lesson2.Ex006.Document.TextDocument;
 
 public class Doc extends TextFormat {
-    
+
     @Override
     public void SaveAs(TextDocument document, String path) {
         try (FileWriter writer = new FileWriter(path + ".doc", false)) {

@@ -16,8 +16,8 @@ public class Goods {
         this.amount = amount;
     }
 
-    public Goods(String name2) {
-    }
+    // public Goods(String name2) {
+    // }
 
     public int getAmount() {
         return amount;
