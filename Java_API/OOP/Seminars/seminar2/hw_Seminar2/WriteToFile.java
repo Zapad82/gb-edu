@@ -39,28 +39,24 @@ package OOP.Seminars.seminar2.hw_Seminar2;
 import java.io.*;
 import java.util.*;
 
-import org.w3c.dom.Text;
 
 public class WriteToFile {
     public static void main(String[] args) throws IOException {
 
         // формируем список объектов Student
-        Map<Integer, TxtWriter<String, Float>> students = new HashMap<Integer, new TxtWriter<String, Float>>();
-        students.put(1, new Student("Андрей Рязанцев", 2.5f));
-        students.addStudent(2, new Student("Виктор Губин", 3.4f));
-        students.addStudent(new Student("Елена Прекрасная", 5.0f));
-        students.addStudent(new Student("Алена Кондакова", 4.7f));
-        students.addStudent(new Student("Иван Иванов", 3.7f));
-        students.addStudent(new Student("Екатерина Токарева", 4.4f));
-        students.addStudent(new Student("Елена Петрова", 5.0f));
-        students.addStudent(new Student("Татьяна Пакова", 4.3f));
+        Map<String, Float> students = new HashMap<>();
+        students.put("Андрей Рязанцев", 2.5f);
+        students.put("Виктор Губин", 3.4f);
+        students.put("Елена Прекрасная", 5.0f);
+        students.put("Алена Кондакова", 4.7f);
+        students.put("Иван Иванов", 3.7f);
+        students.put("Екатерина Токарева", 4.4f);
+        students.put("Елена Петрова", 5.0f);
+        students.put("Татьяна Пакова", 4.3f);
 
-        // System.out.println(students.toString());
-        File file = new File(
-                "OOP/Seminars/seminar2/hw_Seminar2/convertFiles/students.txt");
-        PrintWriter pw = new PrintWriter(file);
-        pw.println(students.toString());
-        pw.close();
+        WriteToTxt.write(students);
+        WriteToJson.write(students);
+        WriteToXml.write(students);
     }
 
 }
