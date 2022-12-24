@@ -25,4 +25,8 @@ public class Student {
                 ", avgGrade=" + avgGrade +
                 '}';
     }
+
+    public static Student nextStudent(int index) {
+        return StudentGroup.studentList.get(index);
+    }
 }
