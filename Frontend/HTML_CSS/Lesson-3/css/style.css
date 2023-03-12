@@ -1,0 +1,48 @@
+p {
+    color: cornflowerblue;
+}
+
+h1 {
+    background-color: darkslategray;
+}
+
+.block {
+    width: 90%;
+    height: 1600px;
+    border: 1px solid #000;
+    background-color: #ccc;
+    background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-03/1614724629_39-p-foni-dlya-lendinga-41.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+.text {
+    color: yellow;
+    font-family: serif;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    color: green;
+}
+
+/* обращение к дочернему элементу */
+.menu__list {
+    border: 1px solid #000;
+}
+
+/* обращение к соседнему элементу */
+.text-up {
+    text-transform: uppercase;
+}

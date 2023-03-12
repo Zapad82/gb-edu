@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<students>
+	<student>
+		<name>Алена Кондакова</name>
+		<grade>4.7</grade>
+	</student>
+	<student>
+		<name>Андрей Рязанцев</name>
+		<grade>2.5</grade>
+	</student>
+	<student>
+		<name>Елена Прекрасная</name>
+		<grade>5.0</grade>
+	</student>
+	<student>
+		<name>Елена Петрова</name>
+		<grade>5.0</grade>
+	</student>
+	<student>
+		<name>Татьяна Пакова</name>
+		<grade>4.3</grade>
+	</student>
+	<student>
+		<name>Екатерина Токарева</name>
+		<grade>4.4</grade>
+	</student>
+	<student>
+		<name>Иван Иванов</name>
+		<grade>3.7</grade>
+	</student>
+	<student>
+		<name>Виктор Губин</name>
+		<grade>3.4</grade>
+	</student>
+</students>

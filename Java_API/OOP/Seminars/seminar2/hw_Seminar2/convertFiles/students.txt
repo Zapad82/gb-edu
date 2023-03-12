@@ -1,0 +1,9 @@
+[OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@4b1210ee, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@4d7e1886, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@3cd1a2f1, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@2f0e140b, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@7440e464, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@49476842, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@78308db1, OOP.Seminars.seminar2.hw_Seminar2.TxtWriter@27c170f0]
+Алена Кондакова=4.7
+Андрей Рязанцев=2.5
+Елена Прекрасная=5.0
+Елена Петрова=5.0
+Татьяна Пакова=4.3
+Екатерина Токарева=4.4
+Иван Иванов=3.7
+Виктор Губин=3.4

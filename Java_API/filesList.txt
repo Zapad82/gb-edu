@@ -1,0 +1,12 @@
+notes3.txt
+hw_seminar2_task3.txt
+lection3_261122.java
+filesList.txt
+lection2_241122.java
+log.txt
+hw_seminar1.java
+seminar1_231122.java
+hw_seminar2.java
+program.java
+hw_seminar2_task1.json
+seminar2_251122.java

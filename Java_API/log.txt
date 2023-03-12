@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-27T21:15:34.051135Z</date>
+  <millis>1669583734051</millis>
+  <nanos>135000</nanos>
+  <sequence>0</sequence>
+  <logger>Ex005_Logger</logger>
+  <level>WARNING</level>
+  <class>Ex005_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Тестовое логирование 1</message>
+</record>
+<record>
+  <date>2022-11-27T21:15:34.250843Z</date>
+  <millis>1669583734250</millis>
+  <nanos>843000</nanos>
+  <sequence>1</sequence>
+  <logger>Ex005_Logger</logger>
+  <level>INFO</level>
+  <class>Ex005_Logger</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Тестовое логирование 2</message>
+</record>
+</log>

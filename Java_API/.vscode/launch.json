@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP.Seminars.seminar7.hw_seminar7.Main",
+            "projectName": "Java_API_ca0a568a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP.Seminars.seminar7.task1.Main",
+            "projectName": "Java_API_ca0a568a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "OOP.Seminars.seminar6.hw_seminar6.hw_task1.Main",
+            "projectName": "Java_API_ca0a568a"
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/OOP/Seminars/seminar7/OOP_Languages/csharp/bin/Debug/net6.0/csharp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/OOP/Seminars/seminar7/OOP_Languages/csharp",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
