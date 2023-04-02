@@ -1,7 +1,6 @@
-package ru.geekbrains.lesson2;
+package Algoritms.Seminar_2.Java;
 
 public class Homework {
-
 
     public static void sort(int[] array) {
         // Построение кучи (перегруппируем массив)
@@ -20,6 +19,7 @@ public class Homework {
 
     /**
      * Метод просеивания
+     * 
      * @param array
      * @param heapSize
      * @param rootIndex
@@ -31,7 +31,8 @@ public class Homework {
         // Если левый дочерний элемент больше корня
         if (leftChild < heapSize && array[leftChild] > array[largest])
             largest = leftChild;
-        // Если правый дочерний элемент больше, чем самый большой элемент на данный момент
+        // Если правый дочерний элемент больше, чем самый большой элемент на данный
+        // момент
         if (rightChild < heapSize && array[rightChild] > array[largest])
             largest = rightChild;
         // Если самый большой элемент не корень

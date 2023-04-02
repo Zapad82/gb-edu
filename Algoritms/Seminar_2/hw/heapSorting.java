@@ -1,3 +1,5 @@
+package Algoritms.Seminar_2.hw;
+
 import java.util.Arrays;
 import java.util.Random;
 
