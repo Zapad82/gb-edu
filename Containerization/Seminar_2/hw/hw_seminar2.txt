@@ -1,0 +1,178 @@
+-- Устанавливаем команды ltx
+gb@n-X501A1:~$ sudo apt install ltx
+[sudo] password for gb: 
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by procWaiting for cache lock: Could not get lock /var/lib/Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package ltx
+
+-- Устанавливаем пакет ltx утилит
+gb@n-X501A1:~$ sudo apt install lxc-utils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+lxc-utils is already the newest version (1:5.0.0~git2209-g5a7b9ce67-0ubuntu1).
+lxc-utils set to manually installed.
+0 to upgrade, 0 to newly install, 0 to remove and 216 not to upgrade.
+
+-- Ограничиваем процесс bash
+root@n-X501A1:/home/gb# unshare --fork --pid --mount-proc bash
+root@n-X501A1:/home/gb# ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  18888  4224 pts/2    S    20:19   0:00 bash
+root           7  0.0  0.0  21604  3784 pts/2    R+   20:20   0:00 ps -aux
+
+-- Создаем контрольную групу mytestgroup
+root@n-X501A1:/home/gb# cgcreate -a $USER -g memory:mytestgroup -g cpu:mytestgroup
+
+-- Переходим в папку группы
+root@n-X501A1:/home/gb# cd /sys/fs/cgroup/mytestgroup
+
+-- Проверяем объем выделенной памяти
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# cat memory.max
+max
+
+-- Входим в контрольную группу
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# cgexec -g memory:mytestgroup bash
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# free -m
+               total        used        free      shared  buff/cache   available
+Mem:            3827        1216         189          36        2421        2342
+Swap:           2047           0        2047
+
+
+-- Смотрим список установленных пакетов lxc
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# lxs storage list 
+Command 'lxs' not found, did you mean:
+  command 'lxd' from snap lxd (5.13-cea5ee2)
+  command 'lxc' from snap lxd (5.13-cea5ee2)
+  command 'lxi' from snap lxi-tools (2.5)
+  command 'lvs' from deb lvm2 (2.03.11-2.1ubuntu4)
+  command 'lxi' from deb lxi-tools (2.1-1)
+  command 'lxd' from deb lxd-installer (1)
+  command 'lrs' from deb lrslib (0.71a-1)
+  command 'les' from deb atm-tools (1:2.5.1-4build2)
+  command 'lxsu' from deb lxqt-sudo (0.17.0-0ubuntu1)
+  command 'lxc' from deb lxd-installer (1)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+See 'snap info <snapname>' for additional versions.
+
+-- Выходим
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# exit
+exit
+
+ -- Ещё раз выходим
+root@n-X501A1:/sys/fs/cgroup/mytestgroup# exit
+exit
+
+-- Устанавливаем lxd снап пакет для управления группами
+root@n-X501A1:/home/gb# snap install lxd   
+lxd 5.13-cea5ee2 от Canonical✓ установлен
+
+-- Смотрим список установленных пакетов lxc
+root@n-X501A1:/home/gb# lxc storage list
+If this is your first time running LXD on this machine, you should also run: lxd init
+To start your first container, try: lxc launch ubuntu:22.04
+Or for a virtual machine: lxc launch ubuntu:22.04 --vm
+
++------+--------+--------+-------------+---------+-------+
+| NAME | DRIVER | SOURCE | DESCRIPTION | USED BY | STATE |
++------+--------+--------+-------------+---------+-------+
+
+-- Смотрим ip
+root@n-X501A1:/home/gb# ip a 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:f8:95:23 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 84568sec preferred_lft 84568sec
+    inet6 fe80::f3c0:dd9:db40:bfc/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: lxcbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 00:16:3e:00:00:00 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.3.1/24 brd 10.0.3.255 scope global lxcbr0
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:42:8b:9a:19 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+-- Смотрим список сетей
+root@n-X501A1:/home/gb# lxc network list
++---------+----------+---------+------+------+-------------+---------+-------+
+|  NAME   |   TYPE   | MANAGED | IPV4 | IPV6 | DESCRIPTION | USED BY | STATE |
++---------+----------+---------+------+------+-------------+---------+-------+
+| docker0 | bridge   | NO      |      |      |             | 0       |       |
++---------+----------+---------+------+------+-------------+---------+-------+
+| enp0s3  | physical | NO      |      |      |             | 0       |       |
++---------+----------+---------+------+------+-------------+---------+-------+
+| lxcbr0  | bridge   | NO      |      |      |             | 0       |       |
++---------+----------+---------+------+------+-------------+---------+-------+
+
+-- Создаём контейнер test123 в ubuntu
+root@n-X501A1:/home/gb# lxc-create -n test123 -t ubuntu
+Checking cache download in /var/cache/lxc/jammy/rootfs-amd64 ... 
+Installing packages in template: apt-transport-https,ssh,vim,language-pack-en,language-pack-ru
+Downloading ubuntu jammy minimal ...
+##
+# The default user is 'ubuntu' with password 'ubuntu'!
+# Use the 'sudo' command to run tasks as root in the container.
+##
+
+-- Запускаем контейнер
+root@n-X501A1:/home/gb# lxc-start -n test123
+lxc-start: test123: tools/lxc_start.c: main: 256 Container is already running
+
+-- Останавливаем контейнер
+root@n-X501A1:/home/gb# lxc-stop -n test123 
+
+-- Идем в редактор конфга
+root@n-X501A1:/home/gb# vi /var/lib/lxc/test123/config
+
+-- Прописываем ограничение памяти для контейнера
+root@n-X501A1:/home/gb# vi /var/lib/lxc/test12/config
+lxc.rootfs.path = dir:/var/lib/lxc/test1234/rootfs — путь
+lxc.uts.name = test1234 -- имя
+
+Network configuration — Конфегурация сети
+.
+.
+.
+lxc.cgroup2.memory.max = 256M -- ограничиваем(В режиме Вставка делаем запись)
+
+:wq -- сохраняем и выходим(в режиме Записи)
+
+lxc-start -n test123 -- запускаем
+lxc-attach -n teat123 -- войдем в него
+free -m -- проверяем пямаять
+-- !!!Видим что наше ограничение работает!!!
+
+-- добавляем автозагрузку контейнера после перезагрузки системы. 
+-- для этого отредактируем файл /etc/default/lxc и изменим значение переменной LXC_AUTO на "true":
+
+   ```
+   LXC_AUTO="true"
+   ```
+-- перезагрузим систему, командой:
+sudo reboot
+
+-- после перезагрузки проверим что контейнер запущен командой:
+sudo lxc-ls -f
+   
+-- если контейнер успешно запущен, мы должны увидеть вывод, подобный следующему:
+   NAME               STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED
+   ubuntu-container   RUNNING 0         -      10.0.3.166 -    false
+
+-- при создании контейнера можно указать файл для записи логов, добавив в команду создания аргумент `--logfile`:
+lxc launch ubuntu:18.04 <container-name> --logfile <path/to/logfile>
+
+-- Вместо `<path/to/logfile>` нужно указать путь и имя файла логов.
+
+-- чтобы проанализировать логи после перезагрузки, нужно найти файл логов, указанный при создании контейнера, и прочитать его содержимое. Например:
+```
+cat <path/to/logfile>
+

@@ -1,0 +1,89 @@
+Урок 3. Введение в Docker
+Задание:
+• Создать папку, которую мы будем готовы смонтировать в контейнер
+• В этой папке создать файл test.txt и наполнить данными
+• В домашней директории создать файл test.txt, который также необходимо будет смонтировать в контейнер и наполнить совершенно другими данными
+• Создать контейнер из образа ubuntu:22.10
+• Задать ему имя
+• Задать hostname
+• Смонтировать созданную ранее папку с хоста в контейнер
+• Смонтировать созданный ранее текстовый файл внутрь смонтированной папки, чтобы он пересекался с созданным ранее файлом в этой папке. Просмотреть этот файл.
+
+'*'- по желанию
+1) запустить контейнер с БД, отличной(mariaDB) от mariaDB, используя инструкции на сайте: https://hub.docker.com/
+2) добавить в контейнер hostname такой же, как hostname системы через переменную
+3) заполнить БД данными через консоль
+4) запустить phpmyadmin (в контейнере) и через веб проверить, что все введенные данные доступны
+
+Для решения задачи потребуются инструкции с сайта: https://hub.docker.com/_/mariadb
+Также потребуется этот мануал, если вдруг не работали с БД ранее: https://mariadb.com/kb/en/create-database/
+
+Команды:
+docker run -it -h GB --name gb-test ubuntu:22.10
+docker start <name of container>
+docker stop <name of container>
+docker exec -it <name of container> bash
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -aq)
+docker rmi $(docker images -aq) –force
+docker run -it -h GB --name gb-test -v /test/folder:/otherway -v /root/test.txt:/otherway/test.txt ubuntu:22.10
+docker run --name test-mariadb -e MARIADB_ROOT_PASSWORD=test123 -d mariadb:10.10.2
+docker run --name my-phpmyadmin -d --link test-mariadb:db -p 8081:80 phpmyadmin/phpmyadmin
+
+
+
+-- Создаем папку, которую мы будем готовы смонтировать в контейнер
+root@n-X501A1:/home/n# mkdir /home/n/test_folder
+
+-- Создаем в этой папке файл test.txt и наполним ее произвольными данными
+root@n-X501A1:/home/n# echo "Привет, Мир!" > /home/n/test_folder/test.txt
+
+-- В домашней директории создаем файл test.txt, который также необходимо будет смонтировать в контейнер и наполнить совершенно другими данными
+root@n-X501A1:/home/n# echo "Это другой мир. Это зазеркалье." > /home/n/test.txt
+
+-- Создаем контейнер из образа ubuntu:22.10 и задаем ему имя gb-test3
+-- Задаем hostname GB3 внутри контейнера
+-- Монтируем созданную ранее папку с хоста в контейнер
+-- Монтируем созданный ранее текстовый файл внутрь смонтированной папки, чтобы он пересекался с созданным ранее файлом в этой папке.
+root@n-X501A1:/home/n# docker run -it -h GB3 --name gb-test3 -v /home/n:/test_folder -v /home/n/test.txt:/test_folder/test.txt ubuntu:22.10
+
+-- Смортим этот файл.
+root@GB3:/# cat /test_folder/test.txt
+Это другой мир. Это зазеркалье.root@GB3:/# exit
+exit
+root@n-X501A1:/home/n# cat test.txt
+Это другой мир. Это зазеркалье.
+root@n-X501A1:/home/n# cat test_folder/test.txt
+Привет, мир!
+
+
+-- Устанавливаем MariaDB
+root@n-X501A1:/home/n# docker pull mariadb:10.10.2
+
+-- Создаем контейнер MariaDB
+root@n-X501A1:/home/n# docker run --name test-mariadb -e MARIADB_ROOT_PASSWORD=test123 -d mariadb:10.10.2
+55d78412f58877972b132e03ac50c6782ed075e777edb647b629b3ea5f54287f
+
+-- Запускаем контейнер базы для заполнения его данными
+root@n-X501A1:/home/n# docker exec -it test-mariadb bash
+
+-- Подключаемся к базе данных и создаем базу MySampleDB
+root@55d78412f588:/# mysql -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204 mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE MySampleDB;
+Query OK, 1 row affected (0.000 sec)
+
+-- Запускаем phpMyAdmin в контейнере
+docker run --name my-phpmyadmin -d --link test-mariadb:db -p 8081:80 phpmyadmin/phpmyadmin
+
+-- Проверяем по ссылке работоспособность 
+http://localhost:8081/
+

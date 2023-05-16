@@ -1,0 +1,50 @@
+-- Задание: необходимо создать Dockerfile, основанный на любом образе (вы в праве выбрать самостоятельно).
+-- В него необходимо поместить приложение, написанное на любом известном вам языке программирования (Python, Java, C, С#, C++).
+-- При запуске контейнера должно запускаться самостоятельно написанное приложение.
+
+
+-- Заходим в режим суперпользователя
+n@n-X501A1:~$ sudo su
+
+-- Создаем папку
+root@n-X501A1:/home/n# mkdir /home/n/hw_Seminar4
+
+-- Переходим в нее
+root@n-X501A1:/home/n# cd hw_Seminar4
+
+-- Создаем файл с кодом на языке Python
+root@n-X501A1:/home/n/hw_Seminar4# nano hw_seminar4.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
+
+-- Создаем Dockerfile
+root@n-X501A1:/home/n/hw_Seminar4# nano Dockerfile
+-- Используем образ Python 3.9
+FROM python:3.9
+-- Устанавливаем зависимости для нашего приложения
+RUN pip install flask  
+-- Копируем наше приложение в контейнер
+COPY hw_seminar4.py /home/n/hw_Seminar4/app/
+-- Указываем рабочую директорию
+WORKDIR /home/n/hw_Seminar4/app
+-- Запускаем приложение при старте контейнера
+CMD ["python", "hw_seminar4.py"]
+
+-- Создаем образ с помощью команды
+root@n-X501A1:/home/n/hw_Seminar4# docker build -t hw4_app:latest .
+
+-- Запускаем успешно скопилированный образ
+root@n-X501A1:/home/n/hw_Seminar4# docker run -p 5000:5000 hw4_app:latest
+
+-- Открываем в браузере страницу
+http://127.0.0.1:5000
+
+

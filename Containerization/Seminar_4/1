@@ -1,0 +1,323 @@
+n@n-X501A1:~$ sudo su
+[sudo] пароль для n: 
+root@n-X501A1:/home/n# mkdir hw-seminar-4
+root@n-X501A1:/home/n# cd hw-seminar-4
+root@n-X501A1:/home/n/hw-seminar-4# nano Dockerfile
+root@n-X501A1:/home/n/hw-seminar-4# nano Dockerfile
+root@n-X501A1:/home/n/hw-seminar-4# docker build -t cowsay .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:22.10
+ ---> f15f05d87425
+Step 2/2 : RUN apt-get update && apt-get install -y cowsay && ln -s /usr/games/cowsay /usr/bin/cowsay && rm -rf /var/lib/apt/lists/* && CMD ["cowsay"]
+ ---> Running in d27b7c76f2f0
+Get:1 http://archive.ubuntu.com/ubuntu kinetic InRelease [267 kB]
+Get:2 http://security.ubuntu.com/ubuntu kinetic-security InRelease [109 kB]
+Get:3 http://archive.ubuntu.com/ubuntu kinetic-updates InRelease [118 kB]
+Get:4 http://security.ubuntu.com/ubuntu kinetic-security/universe amd64 Packages [200 kB]
+Get:5 http://archive.ubuntu.com/ubuntu kinetic-backports InRelease [99.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu kinetic/main amd64 Packages [1778 kB]
+Get:7 http://security.ubuntu.com/ubuntu kinetic-security/restricted amd64 Packages [396 kB]
+Get:8 http://security.ubuntu.com/ubuntu kinetic-security/multiverse amd64 Packages [6284 B]
+Get:9 http://security.ubuntu.com/ubuntu kinetic-security/main amd64 Packages [373 kB]
+Get:10 http://archive.ubuntu.com/ubuntu kinetic/restricted amd64 Packages [151 kB]
+Get:11 http://archive.ubuntu.com/ubuntu kinetic/universe amd64 Packages [17.9 MB]
+Get:12 http://archive.ubuntu.com/ubuntu kinetic/multiverse amd64 Packages [289 kB]
+Get:13 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 Packages [524 kB]
+Get:14 http://archive.ubuntu.com/ubuntu kinetic-updates/universe amd64 Packages [342 kB]
+Get:15 http://archive.ubuntu.com/ubuntu kinetic-updates/multiverse amd64 Packages [7006 B]
+Get:16 http://archive.ubuntu.com/ubuntu kinetic-updates/restricted amd64 Packages [397 kB]
+Get:17 http://archive.ubuntu.com/ubuntu kinetic-backports/universe amd64 Packages [4521 B]
+Fetched 23.0 MB in 8s (2946 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgdbm-compat4 libgdbm6 libperl5.34 libtext-charwidth-perl netbase perl
+  perl-modules-5.34
+Suggested packages:
+  filters cowsay-off gdbm-l10n perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  cowsay libgdbm-compat4 libgdbm6 libperl5.34 libtext-charwidth-perl netbase
+  perl perl-modules-5.34
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7979 kB of archives.
+After this operation, 48.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 perl-modules-5.34 all 5.34.0-5ubuntu1.1 [2952 kB]
+Get:2 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 libperl5.34 amd64 5.34.0-5ubuntu1.1 [4713 kB]
+Get:5 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 perl amd64 5.34.0-5ubuntu1.1 [231 kB]
+Get:6 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libtext-charwidth-perl amd64 0.04-10build3 [10.2 kB]
+Get:7 http://archive.ubuntu.com/ubuntu kinetic/main amd64 netbase all 6.3 [12.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu kinetic/universe amd64 cowsay all 3.03+dfsg2-8 [18.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 7979 kB in 2s (3473 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... 4399 files and directories currently installed.)
+Preparing to unpack .../0-perl-modules-5.34_5.34.0-5ubuntu1.1_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../1-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../2-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../3-libperl5.34_5.34.0-5ubuntu1.1_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../4-perl_5.34.0-5ubuntu1.1_amd64.deb ...
+Unpacking perl (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package libtext-charwidth-perl.
+Preparing to unpack .../5-libtext-charwidth-perl_0.04-10build3_amd64.deb ...
+Unpacking libtext-charwidth-perl (0.04-10build3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../6-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package cowsay.
+Preparing to unpack .../7-cowsay_3.03+dfsg2-8_all.deb ...
+Unpacking cowsay (3.03+dfsg2-8) ...
+Setting up libtext-charwidth-perl (0.04-10build3) ...
+Setting up perl-modules-5.34 (5.34.0-5ubuntu1.1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-5ubuntu1.1) ...
+Setting up perl (5.34.0-5ubuntu1.1) ...
+Setting up cowsay (3.03+dfsg2-8) ...
+Processing triggers for libc-bin (2.36-0ubuntu4) ...
+/bin/sh: 1: CMD: not found
+The command '/bin/sh -c apt-get update && apt-get install -y cowsay && ln -s /usr/games/cowsay /usr/bin/cowsay && rm -rf /var/lib/apt/lists/* && CMD ["cowsay"]' returned a non-zero code: 127
+root@n-X501A1:/home/n/hw-seminar-4# docker images
+REPOSITORY              TAG       IMAGE ID       CREATED        SIZE
+ubuntu                  22.10     f15f05d87425   2 weeks ago    70.3MB
+phpmyadmin/phpmyadmin   latest    e4be0d1537f5   4 weeks ago    517MB
+mariadb                 10.10.2   039bd724508b   2 months ago   410MB
+root@n-X501A1:/home/n/hw-seminar-4# nano Dockerfile
+root@n-X501A1:/home/n/hw-seminar-4# docker build -t cowsay .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM ubuntu:22.10
+ ---> f15f05d87425
+Step 2/2 : RUN apt-get update && apt-get install -y cowsay && ln -s /usr/games/cowsay /usr/bin/cowsay && rm -rf /var/lib/apt/lists/* CMD ["cowsay"]
+ ---> Running in 682218ae58c5
+Get:1 http://security.ubuntu.com/ubuntu kinetic-security InRelease [109 kB]
+Get:2 http://archive.ubuntu.com/ubuntu kinetic InRelease [267 kB]
+Get:3 http://security.ubuntu.com/ubuntu kinetic-security/universe amd64 Packages [200 kB]
+Get:4 http://security.ubuntu.com/ubuntu kinetic-security/restricted amd64 Packages [396 kB]
+Get:5 http://security.ubuntu.com/ubuntu kinetic-security/multiverse amd64 Packages [6284 B]
+Get:6 http://security.ubuntu.com/ubuntu kinetic-security/main amd64 Packages [373 kB]
+Get:7 http://archive.ubuntu.com/ubuntu kinetic-updates InRelease [118 kB]
+Get:8 http://archive.ubuntu.com/ubuntu kinetic-backports InRelease [99.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu kinetic/restricted amd64 Packages [151 kB]
+Get:10 http://archive.ubuntu.com/ubuntu kinetic/main amd64 Packages [1778 kB]
+Get:11 http://archive.ubuntu.com/ubuntu kinetic/multiverse amd64 Packages [289 kB]
+Get:12 http://archive.ubuntu.com/ubuntu kinetic/universe amd64 Packages [17.9 MB]
+Get:13 http://archive.ubuntu.com/ubuntu kinetic-updates/universe amd64 Packages [342 kB]
+Get:14 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 Packages [524 kB]
+Get:15 http://archive.ubuntu.com/ubuntu kinetic-updates/restricted amd64 Packages [397 kB]
+Get:16 http://archive.ubuntu.com/ubuntu kinetic-updates/multiverse amd64 Packages [7006 B]
+Get:17 http://archive.ubuntu.com/ubuntu kinetic-backports/universe amd64 Packages [4521 B]
+Fetched 23.0 MB in 9s (2692 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgdbm-compat4 libgdbm6 libperl5.34 libtext-charwidth-perl netbase perl
+  perl-modules-5.34
+Suggested packages:
+  filters cowsay-off gdbm-l10n perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl
+The following NEW packages will be installed:
+  cowsay libgdbm-compat4 libgdbm6 libperl5.34 libtext-charwidth-perl netbase
+  perl perl-modules-5.34
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7979 kB of archives.
+After this operation, 48.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 perl-modules-5.34 all 5.34.0-5ubuntu1.1 [2952 kB]
+Get:2 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+Get:4 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 libperl5.34 amd64 5.34.0-5ubuntu1.1 [4713 kB]
+Get:5 http://archive.ubuntu.com/ubuntu kinetic-updates/main amd64 perl amd64 5.34.0-5ubuntu1.1 [231 kB]
+Get:6 http://archive.ubuntu.com/ubuntu kinetic/main amd64 libtext-charwidth-perl amd64 0.04-10build3 [10.2 kB]
+Get:7 http://archive.ubuntu.com/ubuntu kinetic/main amd64 netbase all 6.3 [12.9 kB]
+Get:8 http://archive.ubuntu.com/ubuntu kinetic/universe amd64 cowsay all 3.03+dfsg2-8 [18.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 7979 kB in 9s (909 kB/s)
+Selecting previously unselected package perl-modules-5.34.
+(Reading database ... 4399 files and directories currently installed.)
+Preparing to unpack .../0-perl-modules-5.34_5.34.0-5ubuntu1.1_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package libgdbm6:amd64.
+Preparing to unpack .../1-libgdbm6_1.23-1_amd64.deb ...
+Unpacking libgdbm6:amd64 (1.23-1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../2-libgdbm-compat4_1.23-1_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+Selecting previously unselected package libperl5.34:amd64.
+Preparing to unpack .../3-libperl5.34_5.34.0-5ubuntu1.1_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../4-perl_5.34.0-5ubuntu1.1_amd64.deb ...
+Unpacking perl (5.34.0-5ubuntu1.1) ...
+Selecting previously unselected package libtext-charwidth-perl.
+Preparing to unpack .../5-libtext-charwidth-perl_0.04-10build3_amd64.deb ...
+Unpacking libtext-charwidth-perl (0.04-10build3) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../6-netbase_6.3_all.deb ...
+Unpacking netbase (6.3) ...
+Selecting previously unselected package cowsay.
+Preparing to unpack .../7-cowsay_3.03+dfsg2-8_all.deb ...
+Unpacking cowsay (3.03+dfsg2-8) ...
+Setting up libtext-charwidth-perl (0.04-10build3) ...
+Setting up perl-modules-5.34 (5.34.0-5ubuntu1.1) ...
+Setting up netbase (6.3) ...
+Setting up libgdbm6:amd64 (1.23-1) ...
+Setting up libgdbm-compat4:amd64 (1.23-1) ...
+Setting up libperl5.34:amd64 (5.34.0-5ubuntu1.1) ...
+Setting up perl (5.34.0-5ubuntu1.1) ...
+Setting up cowsay (3.03+dfsg2-8) ...
+Processing triggers for libc-bin (2.36-0ubuntu4) ...
+Removing intermediate container 682218ae58c5
+ ---> 303366503097
+Successfully built 303366503097
+Successfully tagged cowsay:latest
+root@n-X501A1:/home/n/hw-seminar-4# docker images
+REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
+cowsay                  latest    303366503097   8 seconds ago   118MB
+ubuntu                  22.10     f15f05d87425   2 weeks ago     70.3MB
+phpmyadmin/phpmyadmin   latest    e4be0d1537f5   4 weeks ago     517MB
+mariadb                 10.10.2   039bd724508b   2 months ago    410MB
+root@n-X501A1:/home/n/hw-seminar-4# cowsay
+^Z
+[1]+  Остановлен    cowsay
+root@n-X501A1:/home/n/hw-seminar-4# docker run cowsaytest cowsay "Muuu"
+Unable to find image 'cowsaytest:latest' locally
+docker: Error response from daemon: pull access denied for cowsaytest, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+root@n-X501A1:/home/n/hw-seminar-4# docker images
+REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
+cowsay                  latest    303366503097   2 minutes ago   118MB
+ubuntu                  22.10     f15f05d87425   2 weeks ago     70.3MB
+phpmyadmin/phpmyadmin   latest    e4be0d1537f5   4 weeks ago     517MB
+mariadb                 10.10.2   039bd724508b   2 months ago    410MB
+root@n-X501A1:/home/n/hw-seminar-4# docker run cowsay cowsay "Muuu"
+ ______
+< Muuu >
+ ------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+root@n-X501A1:/home/n/hw-seminar-4# 
+
+
+## Команды для работы с контейнерами
+
+### Создание контейнера
+
+- **docker create** - создает контейнер, но не запускает его
+- **docker run** - создает и запускает контейнер
+- **docker start** - запускает остановленный контейнер
+- **docker stop** - останавливает контейнер
+- **docker restart** - перезапускает контейнер
+- **docker pause** - приостанавливает выполнение контейнера
+- **docker unpause** - возобновляет выполнение контейнера
+
+### Управление контейнерами
+
+- **docker ps** - выводит список запущенных контейнеров
+- **docker ps -a** - выводит список всех контейнеров, включая остановленные
+- **docker rename** - переименовывает контейнер
+- **docker rm** - удаляет контейнер
+- **docker update** - обновляет настройки контейнера
+
+### Управление образами
+
+- **docker images** - выводит список всех образов
+- **docker rmi** - удаляет образ
+- **docker build** - создает образ из Dockerfile
+
+### Работа с реестром
+
+- **docker login** - авторизация в Docker Hub
+- **docker search** - поиск образов в Docker Hub
+- **docker push** - загрузка образа в Docker Hub
+- **docker pull** - загрузка образа из Docker Hub
+
+### Работа с сетями
+
+- **docker network ls** - выводит список всех сетей Docker
+- **docker network create** - создает новую сеть Docker
+- **docker network rm** - удаляет сеть Docker
+- **docker network connect** - подключает контейнер к сети Docker
+- **docker network disconnect** - отключает контейнер от сети Docker
+
+### Работа с томами
+
+- **docker volume ls** - выводит список всех томов Docker
+- **docker volume create** - создает новый том Docker
+- **docker volume rm** - удаляет том Docker
+- **docker volume inspect** - выводит информацию о томе Docker
+
+### Работа с Docker Compose
+
+- **docker-compose up** - создание и запуск контейнеров из файла docker-compose.yml
+- **docker-compose down** - остановка и удаление контейнеров из файла docker-compose.yml## Команды для работы с контейнерами
+
+### Создание контейнера
+
+- **docker create** - создает контейнер, но не запускает его
+- **docker run** - создает и запускает контейнер
+- **docker start** - запускает остановленный контейнер
+- **docker stop** - останавливает контейнер
+- **docker restart** - перезапускает контейнер
+- **docker pause** - приостанавливает выполнение контейнера
+- **docker unpause** - возобновляет выполнение контейнера
+
+### Управление контейнерами
+
+- **docker ps** - выводит список запущенных контейнеров
+- **docker ps -a** - выводит список всех контейнеров, включая остановленные
+- **docker rename** - переименовывает контейнер
+- **docker rm** - удаляет контейнер
+- **docker update** - обновляет настройки контейнера
+
+### Управление образами
+
+- **docker images** - выводит список всех образов
+- **docker rmi** - удаляет образ
+- **docker build** - создает образ из Dockerfile
+
+### Работа с реестром
+
+- **docker login** - авторизация в Docker Hub
+- **docker search** - поиск образов в Docker Hub
+- **docker push** - загрузка образа в Docker Hub
+- **docker pull** - загрузка образа из Docker Hub
+
+### Работа с сетями
+
+- **docker network ls** - выводит список всех сетей Docker
+- **docker network create** - создает новую сеть Docker
+- **docker network rm** - удаляет сеть Docker
+- **docker network connect** - подключает контейнер к сети Docker
+- **docker network disconnect** - отключает контейнер от сети Docker
+
+### Работа с томами
+
+- **docker volume ls** - выводит список всех томов Docker
+- **docker volume create** - создает новый том Docker
+- **docker volume rm** - удаляет том Docker
+- **docker volume inspect** - выводит информацию о томе Docker
+
+### Работа с Docker Compose
+
+- **docker-compose up** - создание и запуск контейнеров из файла docker-compose.yml
+- **docker-compose down** - остановка и удаление контейнеров из файла docker-compose.yml 
+
+
+
