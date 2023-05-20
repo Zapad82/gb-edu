@@ -1,0 +1,46 @@
+Задание 1:
+
+1) создать сервис, состоящий из 2 различных контейнеров: 1 - веб, 2 - БД
+2) *по итогу на каждой ноде должно быть по 2 работающих контейнера
+3) выводы зафиксировать
+
+
+-- Задачу будем решать с помощью Docker-Compose
+-- В выбранной папке создадим файл docker-compose.yml со следующим содержимым:
+version: '3.9'
+services:
+  web:
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - 6080:8080
+  db:
+    image: mariadb:10.10.2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+-- За web составляющую будет отвечать adminer версии 4.8.1, а за базу данных mariadb версии 10.10.2
+-- Далее командой docker-compose up -d запускаем наш файл в редиме демона.
+-- После выполнения всех манипуляций проверяем наши контейнеры и смотрим вывод
+root@n-X501A1:/home/n/Docker# docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS              PORTS                                       NAMES
+9e6d76441628   adminer:4.8.1     "entrypoint.sh php -…"   About a minute ago   Up About a minute   0.0.0.0:6080->8080/tcp, :::6080->8080/tcp   docker-web-1
+a0af97d949a1   mariadb:10.10.2   "docker-entrypoint.s…"   About a minute ago   Up About a minute   3306/tcp                                    docker-db-1
+
+-- Теперь на каждой ноде запущены по 2 контейнера. Веб-приложение будет доступно на порту 6080.
+
+-- Оба контейнера получили свои IP-адреса. Этот момент проверим на всякий случай. Для этого запустим команду:
+docker container inspect docker-web-1
+docker container inspect docker-db-1
+-- Как видим, контейнеры имеют корректные адреса. Значит, действительно, сеть у них есть и эта сеть - общая.
+-- "Gateway": "172.18.0.1",
+-- "IPAddress": "172.18.0.2",
+-- "Gateway": "172.18.0.1",
+-- "IPAddress": "172.18.0.3",
+
+
+-- Далее можно очистить все, что мы сделали, за ненадобностью
+docker stop $(docker ps -qa) && docker rm $(docker ps -qa) && docker rmi -f $(docker images -qa) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)
+
+
+
