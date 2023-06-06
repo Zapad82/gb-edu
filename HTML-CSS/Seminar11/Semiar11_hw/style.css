@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1600px;
+    padding-left: calc(50%-800px);
+    padding-right: calc(50%-800px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+/* left: 0%;
+right: 0%;
+top: 0%;
+bottom: 97.44%; */
+background: #222222;
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+/* left: 14.44%;
+right: 82.81%;
+top: 0.62%;
+bottom: 98.09%; */
+/* background: url(img/logo.svg) no-repeat; */
+margin-left: 231px;
+padding-top: 18px;
+margin-bottom: 19px;
+}
+
+.header__icons {
+    display: flex;
+}
+
+.searchicon {
+/* left: 19.75%;
+right: 78.63%;
+top: 0.96%;
+bottom: 98.12%; */
+display: inline-block;
+margin-left: 41px;
+}
+
+.hamburger {
+/* left: 75.06%;
+right: 22.94%;
+top: 1.03%;
+bottom: 98.19%; */
+display: inline-block;
+margin-right: 33px;
+}
+
+.accounticon {
+/* left: 79.12%;
+right: 19.06%;
+top: 0.89%;
+bottom: 98.12%; */
+display: inline-block;
+margin-right: 33px;
+}
+
+.cart {
+    /* left: 83%;
+right: 15%;
+top: 0.89%;
+bottom: 98.12%; */
+display: inline-block;
+margin-right: 240px;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topcontainer {
+left: 0%;
+right: 0%;
+top: 2.56%;
+bottom: 71.32%;
+
+background: #F1E4E6;
+}
+
+.top__img {
+    width: 800.58px;
+    height: 764px;
+    left: 0px;
+    top: 75px;
+    background: #F1E4E6;
+    background-image: url(img/topimg.png);
+
+}
+
+.top__text {
+    display: flex;
+    align-items: center;
+}
+
+.img__verticalline {
+    margin-left: 63.42px;
+}
+
+.top__title {
+    padding-left: 16px;
+
+}
+
+.title {
+font-family: 'Lato';
+font-size: 48px;
+font-weight: 900;
+/* line-height: 58px; */
+letter-spacing: 0em;
+text-align: left;
+color: #222222;
+}
+
+.subtitle {
+    font-family: 'Lato';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222222;
+    display: inline-block;
+}
+
+.subtitle__pink {
+    font-family: 'Lato';
+font-size: 32px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: left;
+color: #F16D7F;
+display: inline-block;}
+
+.gridcontainer {
+    display: grid;
+    max-width: 1600px;
+    /* padding-left: calc(50%-800px);
+    padding-right: calc(50%-800px); */
+}
+
+.grid__cards {
+    display: grid;
+    margin: 65px 230px 96px 230px;
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+    /* padding-left: calc(50%-800px);
+    padding-right: calc(50%-800px);  */
+    justify-content: center;
+}
+
+.cards__bg1 {
+    background: url(img/forwoman.png) no-repeat;
+    background-size:cover;
+}
+
+.cards__bg2 {
+    background: url(img/forman.png) no-repeat;
+    background-size: cover;
+}
+
+.cards__bg3 {
+    background: url(img/forkids.png) no-repeat;
+    background-size: cover;
+}
+
+.cards__bg4 {
+    max-height: 180px;
+    background: url(img/accesories.png) no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+}
+
+.grid_card {
+    /* left: 14.38%;
+    right: 63.12%;
+    top: 30.91%;
+    bottom: 60.21%; */
+    display: grid;
+    background-color: rgba(33, 22, 22, 0.7);
+    min-height: 260px;
+    align-content: center;
+
+}
+
+.grid_card4 {
+    min-height: 180px;
+}
+
+.text__w {
+    font-family: Lato;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+
+}
+
+.h2__pink {
+font-family: Lato;
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: center;
+color: #F16D7F;
+}
+
+.text {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.h2__normal {
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 36px;
+/* identical to box height */
+color: #222222;
+}
+
+.text__normal {
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+color: #9F9F9F;
+}
+
+.grid__shop {
+    display: grid;
+    margin: 65px 230px 0 230px;
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+    grid-template-rows: 581px 581px;
+    gap: 30px;   
+    justify-content: center;
+}
+
+.card__items {
+    display: grid;
+    background-color: #F8F8F8;
+    min-height: 581px;
+    align-content: center;
+
+
+}
+
+.h2__item {
+    width: 148.11px;
+height: 16px;
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+/* identical to box height */
+margin-top: 25px;
+margin-bottom: 16px;
+margin-left: 16px;
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.text__item {
+    width: 314.74px;
+height: 51px;
+margin-left: 16px;
+font-family: 'Lato';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+
+color: #5D5D5D;
+margin-bottom: 16px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.text__price {
+    /* $52.00 */
+margin-left: 16px;
+
+width: 52.46px;
+height: 19px;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #F16D7F;
+margin-bottom: 19px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+.card__item2 {
+    display: grid;
+}
+.img__item2 {
+    display: grid;
+    justify-content: center;
+    background: #F7E4E2;
+background-size:auto;}
+
+.img__item2img{
+    margin-top: 9px;
+    margin-bottom: 11px;
+}
+
+.buttons {
+    margin-top: 48.5px;
+    margin-bottom: 60.5px;
+    left: 43.47%;
+right: 43.34%;
+top: 96.32%;
+bottom: 2.07%;
+width: 211px;
+height: 47px;
+border: 1px solid #FF6A6A;
+}
+
+.but__text {
+    left: 45.88%;
+right: 45.75%;
+top: 96.82%;
+bottom: 2.53%;
+
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+color: #F26376;
+}
