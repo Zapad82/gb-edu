@@ -1,0 +1,51 @@
+// Текст и ширина
+@import 'vars';
+@import 'mixin';
+
+body {
+  padding: 200px;
+}
+.container {
+  width: $screenWidth;
+  height: 200px;
+  background-color: tomato;
+  border: 2px solid black;
+  box-shadow: 20px 20px 20px 10px greenyellow;
+  padding: 20px;
+}
+
+.title{
+  font-size: 40px;
+  &-color{
+    color: $textColor;
+  }
+}
+
+.fontStyle {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.nav {
+    display:flex;
+    gap: $navGap;
+    &__link {
+        text-decoration: none;
+        @extend .fontStyle;
+    }
+}
+
+.content {
+    width: $screenWidth;
+    display: flex;
+    flex-wrap: wrap;
+    gap: ($navGap);
+    &__item {
+        width: ($screenWidth - 3 * $navGap) / 4;
+        border: $borderItem;
+        box-sizing: border-box;
+        height: 200px;
+    }
+    @include flexMix();
+
+}
