@@ -304,6 +304,7 @@ a {
     }
 
     &__content-block {
+
       margin-top: 0;
       display: -ms-grid;
       display: grid;
@@ -320,6 +321,8 @@ a {
 
     &__product-box-page {
       padding: 0;
+      padding-left: calc(50% - 570px);
+      padding-right: calc(50% - 570px);
     }
 
   }
