@@ -1,0 +1,42 @@
+@font-face 
+    font-family: 'merriweatherbold'
+    src: url('merriweather-bold-webfont.woff2') format('woff2')
+    src: url('merriweather-bold-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'open_sansregular'
+    src: url('opensans-variablefont_wdthwght-webfont.woff2') format('woff2')
+    src: url('opensans-variablefont_wdthwght-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+
+
+.title
+    font-family: 'merriweatherbold'
+    width: 200px
+    height: 200px
+    border-image-width: 20px
+    border-image-source: url('img/border-image-slice.png')
+    border-image-slice: 40
+    border-image-repeat: round
+
+.text
+    font-family: 'open_sansregular'
+    border: 10px solid transparent
+    border-image: linear-gradient(#0B0E7F , #0B95DD)
+    -moz-border-image: -moz-linear-gradient(#0B0E7F , #0B95DD)
+    -webkit-border-image: -webkit-linear-gradien(#0B0E7F , #0B95DD)
+    border-image-slice: 1
+    &__contur
+        font-family: 'merriweatherbold'
+        -webkit-text-stroke-width: 1.4px
+        -webkit-text-stroke-color: #4b56c1
+
+.threangle
+    width: 0
+    height: 0
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    border-bottom: 100px solid #24375B
