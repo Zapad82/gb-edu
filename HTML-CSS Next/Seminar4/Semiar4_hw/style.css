@@ -22,7 +22,6 @@ a {
 }
 
 .top {
-  position: relative;
   overflow: hidden;
 }
 
@@ -41,6 +40,7 @@ a {
   gap: 41px;
 }
 .header__right {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 33px;
@@ -58,7 +58,7 @@ a {
   position: absolute;
   top: 75px;
   right: -232px;
-  z-index: 1;
+  z-index: 45;
   transition: right 0.6s;
   width: 232px;
   background: #FFFFFF;
@@ -992,24 +992,21 @@ path {
 
 .button {
   margin-top: 49px;
-  width: 212px;
-  height: 48px;
   display: flex;
   border: 1px solid #F16D7F;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #F16D7F;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #F16D7F;
   justify-content: center;
   align-items: center;
   gap: 22px;
   transition: all 1s;
+}
+.button__add-to-cart {
+  width: 212px;
+  height: 48px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F16D7F;
 }
 .button:hover {
   transform: rotateX("angle");
@@ -1186,6 +1183,126 @@ h3 {
   letter-spacing: 0em;
   text-align: left;
   color: #F16D7F;
+}
+
+.contentreg {
+  display: flex;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.contentreg__left_regform-label {
+  color: #222;
+  font-size: 16px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.contentreg__left_regform-text {
+  color: #B1B1B1;
+  font-size: 13px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  width: 359px;
+  margin-top: 15px;
+  margin-bottom: 39px;
+}
+.contentreg__left_regform-input {
+  display: block;
+  margin-top: 20.5px;
+  width: 359px;
+  height: 44px;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #A4A4A4;
+  padding-left: 17px;
+}
+.contentreg__left_regform-radio {
+  display: inline-flex;
+  gap: 20px;
+  padding-top: 31px;
+  padding-bottom: 33px;
+  color: #A4A4A4;
+  color: #000;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.contentreg__left_regform-radio_gender {
+  display: inline-flex;
+  gap: 10px;
+}
+.contentreg__left_regform-button {
+  margin: 0;
+  min-height: 50px;
+  min-width: 167px;
+  display: flex;
+  border: 1px solid #F16D7F;
+  background-color: #F16D7F;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  color: #FFF;
+  font-size: 14px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contentreg__left_regform-button:hover {
+  color: #F16D7F;
+  background-color: #fff;
+}
+.contentreg__left_regform-button:hover path {
+  fill: white;
+}
+.contentreg__left_regform-button_arrow {
+  display: inline-flex;
+  align-items: center;
+  width: 17px;
+  height: 10px;
+  flex-shrink: 0;
+}
+.contentreg__right {
+  margin-left: 125px;
+}
+.contentreg__right_title {
+  color: #000;
+  font-size: 24px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+.contentreg__right_text {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.contentreg__right_text-list {
+  display: inline;
+  padding-left: 23px;
+  color: #000;
+  font-size: 24px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.contentreg__right_list-ul {
+  list-style-position: inside;
+  list-style-image: url("img/ok.svg");
+}
+.contentreg__right_list-li {
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1024px) {

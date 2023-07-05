@@ -9,6 +9,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+container {
+  // position: relative;
+}
+
 img {
     max-width: 100%;
 }
@@ -23,7 +27,6 @@ a {
 }
 
 .top {
-    position: relative;
     overflow: hidden;
 }
 
@@ -57,6 +60,7 @@ a {
     }
 
     &__right {
+      position:relative;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -84,7 +88,7 @@ a {
     position: absolute;
     top: 75px;
     right: -232px;
-    z-index: 1;
+    z-index: 45;
     -webkit-transition: right 0.6s;
     transition: right 0.6s;
     width: 232px;
@@ -1171,24 +1175,22 @@ path {
     }
 .button {
   margin-top: 49px;
-      width: 212px;
-      height: 48px;
+
       display: flex;
       border: 1px solid #F16D7F;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      color: #F16D7F;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      color: #F16D7F;
       justify-content: center;
       align-items: center;
       gap: 22px;
       transition: all 1s;
+      &__add-to-cart {
+        width: 212px;
+        height: 48px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F16D7F;
+      }
       &:hover {
           transform: rotateX('angle');
           color: #fff;
@@ -1196,6 +1198,7 @@ path {
       &:hover path {
           fill: white;}
       }
+
 
 nav {
   display: flex;
@@ -1388,6 +1391,132 @@ word-wrap: break-word;
 
     }
 
+// Регистрация
+.contentreg {
+  display: flex;
+  padding-top: 64px;
+  padding-bottom: 96px;
+  &__left {
+    &_regform {
+      &-label {
+        color: #222;
+        font-size: 16px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      &-text {
+        color: #B1B1B1;
+        font-size: 13px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        width: 359px;
+        margin-top: 15px;
+        margin-bottom: 39px;
+      }
+      &-input {
+        display: block;
+        margin-top: 20.5px;
+        width: 359px;
+        height: 44px;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        border: 1px solid #A4A4A4;
+        padding-left: 17px;
+      }
+      &-radio {
+        display: inline-flex;
+        gap: 20px;
+        padding-top: 31px;
+        padding-bottom: 33px;
+        color:#A4A4A4;
+        color: #000;
+        font-size: 11px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        &_gender {
+          display: inline-flex;
+          gap: 10px;
+        }
+      }
+      &-button {
+        margin: 0;
+        min-height: 50px;
+        min-width: 167px;
+        display: flex;
+        border: 1px solid #F16D7F;
+        background-color: #F16D7F;
+        justify-content: center;
+        // padding-left: 29px;
+        align-items: center;
+        transition: all 1s;
+        color: #FFF;
+        font-size: 14px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &:hover {
+          color: #F16D7F;
+          background-color: #fff;
+        }
+        &:hover path {
+          fill: white;
+        }
+        &_arrow {
+          display: inline-flex;
+          align-items: center;
+          width: 17.00px;
+          height: 10px;
+          flex-shrink: 0;
+
+        }
+      }
+    }
+  }
+  &__right {
+    margin-left: 125px;
+    &_title {
+      color: #000;
+      font-size: 24px;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin-bottom: 22px;
+    }
+    &_text {
+      margin-top: 22px;
+      margin-bottom: 22px;
+      &-list {
+        display: inline;
+        padding-left: 23px;
+        color: #000;
+        font-size: 24px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }    
+    }
+    &_list-ul {
+      list-style-position: inside;
+      list-style-image: url('img/ok.svg');
+    }
+    &_list-li {
+      margin-bottom: 16px;
+    }
+  }
+}
 
 
 // Адаптив
