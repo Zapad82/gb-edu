@@ -22,10 +22,13 @@ a {
 }
 
 .top {
+  overflow: hidden;
   display: 100vh;
+  position: relative;
 }
 
 .header {
+  position: relative;
   min-height: 75px;
   background: #222222;
   display: flex;
@@ -40,7 +43,6 @@ a {
   gap: 41px;
 }
 .header__right {
-  position: relative;
   display: flex;
   align-items: center;
   gap: 33px;
@@ -1449,14 +1451,47 @@ h3 {
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
+  .center {
+    margin: 0 auto;
+    width: 100%;
+  }
   .head {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
   }
+  .header {
+    position: relative;
+    min-height: 75px;
+    background: #222222;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__left {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+  }
+  .header__right {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+  }
+  .header__checkbox {
+    position: absolute;
+    visibility: hidden;
+    left: -9999999px;
+  }
+  .header__checkbox:checked ~ .mobile-menu {
+    right: 0;
+  }
   .header__link-site {
     display: none;
+    visibility: hidden;
   }
   .promo {
     display: flex;
@@ -1544,6 +1579,9 @@ h3 {
   .contentreg__left {
     margin-left: 9px;
     margin-right: 9px;
+  }
+  .contentreg__left_regform-input {
+    width: 100%;
   }
   .contentreg__right {
     margin-top: 40px;

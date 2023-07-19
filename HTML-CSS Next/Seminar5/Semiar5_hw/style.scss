@@ -27,11 +27,14 @@ a {
 }
 
 .top {
-    // overflow: hidden;
+    overflow: hidden;
     display: 100vh;
+    position: relative
 }
 
 .header {
+  position:relative;
+
   min-height: 75px;
   background: #222222;
   display: -webkit-box;
@@ -61,7 +64,6 @@ a {
   }
 
   &__right {
-    position:relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1721,6 +1723,11 @@ word-wrap: break-word;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .center {
+    margin: 0 auto;
+    width: 100%;
+}
+
   .head {
     display: flex;
     flex-direction: column;
@@ -1728,8 +1735,62 @@ word-wrap: break-word;
     gap: 32px;
   }
 
+  .header {
+    position:relative;
+  
+    min-height: 75px;
+    background: #222222;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  
+    &__left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      gap: 41px;
+    }
+  
+    &__right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      gap: 33px;
+    }
+  
+    &__checkbox {
+      position: absolute;
+      visibility: hidden;
+      left: -9999999px;
+    }
+  
+    &__checkbox:checked~.mobile-menu {
+      right: 0;
+    }
+  
+  }
+
   .header__link-site {
     display: none;
+    visibility: hidden;
   }
 
   .promo {
@@ -1837,13 +1898,20 @@ word-wrap: break-word;
     align-items: center;
     &__left {
       margin-left: 9px;
-      margin-right: 9px;      
+      margin-right: 9px;
+      &_regform {
+        &-input {
+          width: 100%;
+        }
+      }      
     }
     &__right {
       margin-top: 40px;
       margin-left: 9px;
       margin-right: 9px;
     }
+
+
   }
 
   .footer1 {
