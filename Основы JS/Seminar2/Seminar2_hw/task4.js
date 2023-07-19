@@ -26,4 +26,4 @@ const edinica_cel = parseInt((num1/10));
 const dec = edinica_cel % 10;
 const sot_cel = parseInt((num1/100));
 const sot = sot_cel % 10;
-alert(`В числе ${num1} количество сотен: ${sot}, колчество десятков: ${dec}, количество единиц: ${edinica}`);
+alert(`В числе ${num1} количество сотен: ${sot}, десятков: ${dec}, единиц: ${edinica}`);
