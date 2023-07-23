@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 1.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="task__title">
+            Задание 4
+        </div>
+        <div>
+            <div class="task__text">
+                Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):<br><br>
+                1. Сложение<br>
+                2. Разность<br>
+                3. Умножение<br>
+                4. Деление<br><br>
+                Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.<br><br>
+
+
+                <h3>
+                    Решение:
+                </h3>
+                <div>
+                    function sumNumbers(num1, num2) {<br>
+                        return(num1 + num2);<br>
+                    }<br><br>
+                    
+                    function difNumbers(num1, num2) {<br>
+                        if (num1 > num2) {<br>
+                            return (num1 - num2);<br>
+                        } else if (num1 < num2) {<br>
+                            return (num2 - num1);<br>
+                        } else {<br>
+                            return 0;<br>
+                        }<br>
+                    }<br><br>
+                    
+                    function multNumbers(num1, num2) {<br>
+                        return (num1 * num2);<br>
+                    }<br><br>
+                    
+                    function divNumbers (num1, num2) {<br>
+                        return (num1 / num2);<br>
+                    }<br><br>
+                    
+                    
+                    console.log(`Сумма чисел 10 и 20 равна: ${sumNumbers(10, 20)}`);<br>
+                    console.log(`Разность чисел 10 и 20 равна: ${difNumbers(10, 20)}`);<br>
+                    console.log(`Умножение чисел 10 и 20 равна: ${multNumbers(10, 20)}`);<br>
+                    console.log(`Деление чисел 10 и 20 равна: ${divNumbers(10, 20)}`);<br><br>
+                </div>
+                
+                JavaScript доступен в консоли браузера<br>
+            </div>
+            
+        </div>
+
+        <div class="task__button-flex">
+            <a href="index.html" class="task__button">Перейти к задаче 1</a>
+        </div>
+    </div>
+
+
+    <script src="hw4.js"></script>
+</body>
+</html>
