@@ -6,12 +6,16 @@ const salaryBrutto = Number(prompt('Введиде Ваш размер зарп�
 
 function SalaryNetto (salaryBrutto) {
     if (Number.isNaN(salaryBrutto)) {
-        alert('Вы ввели неверное значение!');
+        return null;
+        // alert('Вы ввели неверное значение!');
     } else {
         return(salaryBrutto - (salaryBrutto * 13 / 100));        
     }
 }
 
-alert(SalaryNetto(salaryBrutto));
-
-//как убрать второй (системный) алерт?
+//Убираем второй (системный) алерт
+if (SalaryNetto(salaryBrutto) === null) {
+    alert('Вы ввели неверное значение!');
+} else {    
+    alert(SalaryNetto(salaryBrutto));
+}
