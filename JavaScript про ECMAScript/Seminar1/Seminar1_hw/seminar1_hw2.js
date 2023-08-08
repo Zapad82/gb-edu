@@ -4,16 +4,23 @@
 Значение счетчика должно быть доступно только через методы объекта, а не напрямую. */
 
 
-const createCounter = (arg) => {
+const createCounter = () => {
+    let count = 0;
     return {
-        increment(numb) {
-            console.log(arg + 1);
+        increment() {
+            count++;
         },
-        decrement(numb) {
-            console.log(arg - 1);
-        }
+        decrement() {
+            count--;
+        },
+        returnCount() {
+            return count;
+        },
     };
 };
 
-counter.increment(10);
-counter.decrement(10);
+const counter = createCounter();
+counter.increment();
+counter.increment();
+counter.decrement();
+console.log(counter.returnCount());
