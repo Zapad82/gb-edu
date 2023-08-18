@@ -1,0 +1,341 @@
+
+<!-- Часть 1: Данное задание направлено на подготовку проекта к итоговой аттестации.
+По заданному макету https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=101-14&t=hPokjgMtIgcsYlyO-0 создать верстку главной страницы (без использования vue).
+
+Часть 2. ### Задачи по vue
+1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке.
+2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+3. * При клике на элемент списка он должен быть удален. (по желанию) -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interno - Homepage</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__left">
+                <div class="header__left_block-logo">
+                    <img src="./img/logos/Logo.png" alt="Logo" class="logo">
+                    <div class="siteName">Interno</div>
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="header__menu">
+                    <a href="#" class="header__menu_link">Home</a>
+                    <a href="#" class="header__menu_link">Project</a>
+                    <a href="#" class="header__menu_link">Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="banner">
+            <div class="banner__into">
+                <div class="banner__subcontent">
+                    <h1 class="banner__subcontent-head">
+                        Let Your Home Be Unique
+                    </h1>
+                    <div class="banner__subcontent-text">
+                        There are many variations of the passages of lorem Ipsum fromavailable, majority.
+                    </div>
+                </div>
+                <div class="button">
+                    Get Started
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 8.43542L15.7232 8.29857M10.6182 1.91138L17.1412 8.43436L10.4868 15.0887" stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="project">
+            <div class="project__heading">
+                <h2 class="project__heading_title">
+                    Follow Our Projects
+                </h2>
+                <div class="project__heading_subtitle">
+                    It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.
+                </div>
+            </div>
+            <div class="project__content">
+                <div class="project__content_block">
+                    <div class="project__content_block-left">
+                        <div class="project__content_block-img1">
+                        </div>
+                        <div class="project__content_block-nav">
+                            <div class="project__content_block-text">
+                                <div class="project__content_block-text_title">
+                                    Modern Kitchan
+                                </div>
+                                <div class="project__content_block-text_subtitle">
+                                    Decor / Artchitecture
+                                </div>
+                            </div>
+                            <div class="project__content_block-button">
+                                <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="project__content_block-right">
+                        <div class="project__content_block-img2">
+                        </div>
+                        <div class="project__content_block-nav">
+                            <div class="project__content_block-text">
+                                <div class="project__content_block-text_title">
+                                    Modern Kitchan
+                                </div>
+                                <div class="project__content_block-text_subtitle">
+                                    Decor / Artchitecture
+                                </div>
+                            </div>
+                            <div class="project__content_block-button">
+                                <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project__content_block">
+                    <div class="project__content_block-left">
+                        <div class="project__content_block-img3">
+                        </div>
+                        <div class="project__content_block-nav">
+                            <div class="project__content_block-text">
+                                <div class="project__content_block-text_title">
+                                    Modern Kitchan
+                                </div>
+                                <div class="project__content_block-text_subtitle">
+                                    Decor / Artchitecture
+                                </div>
+                            </div>
+                            <div class="project__content_block-button">
+                                <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="project__content_block-right">
+                        <div class="project__content_block-img4">
+                        </div>
+                        <div class="project__content_block-nav">
+                            <div class="project__content_block-text">
+                                <div class="project__content_block-text_title">
+                                    Modern Kitchan
+                                </div>
+                                <div class="project__content_block-text_subtitle">
+                                    Decor / Artchitecture
+                                </div>
+                            </div>
+                            <div class="project__content_block-button">
+                                <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="counter">
+            <div class="counter__counters">
+                <div class="counter__counters_block">
+                    <div class="counter__counters-cnt">12</div>
+                    <div class="counter__counters-label">
+                        Years Of Experiance
+                    </div>
+                </div>
+                <div>
+                    <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274"/>
+                        </svg>                        
+                </div>
+                <div class="counter__counters_block">
+                    <div class="counter__counters-cnt">85</div>
+                    <div class="counter__counters-label">
+                        Success Project
+                    </div>
+                </div>
+                <div>
+                    <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274"/>
+                        </svg>                        
+                </div>
+                <div class="counter__counters_block">
+                    <div class="counter__counters-cnt">15</div>
+                    <div class="counter__counters-label">
+                        Active Project
+                    </div>
+                </div>
+                <div>
+                    <svg width="1" height="130" viewBox="0 0 1 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="2.18557e-08" x2="0.499994" y2="130" stroke="#CDA274"/>
+                        </svg>                        
+                </div>
+                <div class="counter__counters_block">
+                    <div class="counter__counters-cnt">95</div>
+                    <div class="counter__counters-label">
+                        Happy CUstomers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog">
+            <div class="blog__heading">
+                <div class="blog__heading-title">
+                    Articles & News
+                </div>
+                <div class="blog__heading-subtitle">
+                    It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.
+                </div>
+            </div>
+            <div class="blog__blog">
+                <div class="blog_blog-1">
+                    <div class="blog__blog_subcontent">
+                        <div class="blog__blog_content">
+                            <div class="blog__blog_content-img">
+                                <div class="blog__blog_content-img_tag">
+                                    <div class="blog__blog_content-img_tag-rectangle">
+                                        <div class="blog__blog_content-img_tag-text">
+                                            Kitchan Design
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__blog_content-subcontent">
+                                <div class="blog__blog_content-title">
+                                    Let’s Get Solution For Building Construction Work
+                                </div>
+                                <div class="blog__blog_content-date">
+                                    <div class="blog__blog_content-dateText">
+                                        26 December,2022
+                                    </div>
+                                    <div class="project__content_block-button">
+                                        <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__blog_tag">
+
+                    </div>
+                </div>
+
+                <div class="blog_blog-1">
+                    <div class="blog__blog_subcontent blog__blog_subcontent-bgColor">
+                        <div class="blog__blog_content">
+                            <div class="blog__blog_content-img">
+                                <div class="blog__blog_content-img_tag">
+                                    <div class="blog__blog_content-img_tag-rectangle">
+                                        <div class="blog__blog_content-img_tag-text">
+                                            Kitchan Design
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__blog_content-subcontent">
+                                <div class="blog__blog_content-title">
+                                    Let’s Get Solution For Building Construction Work
+                                </div>
+                                <div class="blog__blog_content-date">
+                                    <div class="blog__blog_content-dateText">
+                                        26 December,2022
+                                    </div>
+                                    <div class="project__content_block-button">
+                                        <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRightWhite.svg" alt="Go" class="project__content_block-imgButton"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__blog_tag">
+
+                    </div>
+                </div>
+
+                <div class="blog_blog-1">
+                    <div class="blog__blog_subcontent">
+                        <div class="blog__blog_content">
+                            <div class="blog__blog_content-img">
+                                <div class="blog__blog_content-img_tag">
+                                    <div class="blog__blog_content-img_tag-rectangle">
+                                        <div class="blog__blog_content-img_tag-text">
+                                            Kitchan Design
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__blog_content-subcontent">
+                                <div class="blog__blog_content-title">
+                                    Let’s Get Solution For Building Construction Work
+                                </div>
+                                <div class="blog__blog_content-date">
+                                    <div class="blog__blog_content-dateText">
+                                        26 December,2022
+                                    </div>
+                                    <div class="project__content_block-button">
+                                        <a href="#" class="project__contnet_block-link"><img src="./img/logos/_toRight.svg" alt="Go" class="project__content_block-imgButton"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__blog_tag">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer">
+            <div class="footer__interno">
+                <div class="footer__interno_interno">
+                    <div class="footer__interno_interno-subcontent">
+                        <div class="header__left_block-logo">
+                            <img src="./img/logos/Logo.png" alt="Logo" class="logo">
+                            <div class="siteName">Interno</div>
+                        </div>
+                        <div class="footer__intenro_interno-text">
+                            It is a long established fact that a reader will be distracted lookings.                           
+                        </div>
+                    </div>
+
+                    <div class="social_links">
+                        <div class="social__links-icons">
+                            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6367 4.59375C17.3398 4.06641 17.9727 3.43359 18.4648 2.69531C17.832 2.97656 17.0938 3.1875 16.3555 3.25781C17.1289 2.80078 17.6914 2.09766 17.9727 1.21875C17.2695 1.64062 16.4609 1.95703 15.6523 2.13281C14.9492 1.39453 14 0.972656 12.9453 0.972656C10.9062 0.972656 9.25391 2.625 9.25391 4.66406C9.25391 4.94531 9.28906 5.22656 9.35938 5.50781C6.30078 5.33203 3.55859 3.85547 1.73047 1.64062C1.41406 2.16797 1.23828 2.80078 1.23828 3.50391C1.23828 4.76953 1.87109 5.89453 2.89062 6.5625C2.29297 6.52734 1.69531 6.38672 1.20312 6.10547V6.14062C1.20312 7.93359 2.46875 9.41016 4.15625 9.76172C3.875 9.83203 3.52344 9.90234 3.20703 9.90234C2.96094 9.90234 2.75 9.86719 2.50391 9.83203C2.96094 11.3086 4.33203 12.3633 5.94922 12.3984C4.68359 13.3828 3.10156 13.9805 1.37891 13.9805C1.0625 13.9805 0.78125 13.9453 0.5 13.9102C2.11719 14.9648 4.05078 15.5625 6.16016 15.5625C12.9453 15.5625 16.6367 9.97266 16.6367 5.08594C16.6367 4.91016 16.6367 4.76953 16.6367 4.59375Z" fill="#292F36"/>
+                                </svg>                        
+                        </div>
+                        <div class="social__links-icons">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.14062 16V5.48828H0.871094V16H4.14062ZM2.48828 4.08203C3.54297 4.08203 4.38672 3.20312 4.38672 2.14844C4.38672 1.12891 3.54297 0.285156 2.48828 0.285156C1.46875 0.285156 0.625 1.12891 0.625 2.14844C0.625 3.20312 1.46875 4.08203 2.48828 4.08203ZM16.3398 16H16.375V10.2344C16.375 7.42188 15.7422 5.24219 12.4375 5.24219C10.8555 5.24219 9.80078 6.12109 9.34375 6.92969H9.30859V5.48828H6.17969V16H9.44922V10.7969C9.44922 9.42578 9.69531 8.125 11.3828 8.125C13.0703 8.125 13.1055 9.67188 13.1055 10.9023V16H16.3398Z" fill="#292F36"/>
+                                </svg>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

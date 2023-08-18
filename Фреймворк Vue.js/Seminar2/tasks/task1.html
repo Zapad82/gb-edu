@@ -1,0 +1,40 @@
+<!-- 1. Вы разрабатываете страницу для отображения информации о товаре.
+У Ва есть объект product, который содержит информацию о товаре, ключая название,
+цену и URL изображение товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind
+2. Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии скидки. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ product.title }}</h2>
+        <img v-bind:src="product.imageURL" alt="Изображение товара" width="200px">
+        <p>Цена: {{ product.price }}$</p>
+        <button @click="applyDiscount">Получить скидку</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                product: {
+                    title: "Мягкая игрушка",
+                    price: 99.99,
+                    imageURL: "https://avatars.mds.yandex.net/get-mpic/5256693/img_id4384054216907788014.jpeg/orig"
+                }
+            },
+            methods: {
+                applyDiscount: function() {
+                    var discount = Math.floor(Math.random() * 20) + 1; // Генерируем скидку от 1 до 20%
+                    var discountedPrice = this.product.price - (this.product.price * discount / 100);
+                    this.product.price = discountedPrice.toFixed(2); // Обновляем цену с учетом скидки
+                }
+            }
+        });
+    </script>
+</body>
+</html>

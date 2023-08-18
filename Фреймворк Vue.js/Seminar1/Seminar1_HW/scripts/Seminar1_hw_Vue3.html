@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить и удалить</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+
+</head>
+<body>
+    <div id="app">
+      <h2>Список элементов</h2>
+      <button @click="addNewItem">Добавить</button>
+      <ul>
+        <li v-for="(item, index) in items" @click="removeItem(index)">{{ item }}</li>
+      </ul>
+    </div>
+  
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          items: []
+        },
+        methods: {
+          addNewItem: function() {
+            this.items.push('Новый элемент списка');
+          },
+          removeItem: function(index) {
+            this.items.splice(index, 1);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

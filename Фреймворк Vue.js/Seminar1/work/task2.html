@@ -1,0 +1,39 @@
+<!-- 1. Создать две кнопки "Мне исполнилось 14 лет" и "Мне еще нет 14 лет"
+2. Если пользователь нажимает на первую кнопку, то должен отобразиться текст. "Можете заказать товар"
+3. Если пользователь нажимает вторую кнопку, отображается текст "Доступ закрыт" -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 2</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="checkAge(true)">Мне исполнилось 14 лет</button>
+        <button @click="checkAge(false)">Мне еще нет 14 лет</button>
+        <div v-if="isAllowed">{{ message }}</div>
+        <div v-else>{{ message }}</div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            isAllowed: false,
+            message: ''
+          },
+          methods: {
+            checkAge(isAllowed) {
+              this.isAllowed = isAllowed;
+              this.message = isAllowed ? 'Можете заказать товар' : 'Доступ закрыт';
+            }
+          }
+        });
+      </script>
+</body>
+</html>
