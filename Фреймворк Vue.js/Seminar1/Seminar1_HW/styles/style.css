@@ -583,6 +583,7 @@ input {
   margin-left: 50%;
   transform: translateX(-50%);
   background: url(../img/content/bannerBlog.jpg), lightgray 50%/cover no-repeat;
+  margin-top: 45px;
 }
 .blogpage__banner-into {
   display: flex;

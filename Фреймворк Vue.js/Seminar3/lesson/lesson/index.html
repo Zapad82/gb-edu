@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    <todo-list/>-->
+<!--    <filter-list/>-->
+    <task-4/>
+</div>
+<script>
+    Vue.component("task-4", {
+        //   props: [],
+
+        data() {
+            return {
+                search: "",
+                product: [
+                    { name: "товар 1", price: 15 },
+                    { name: "товар 2", price: 250 },
+                    { name: "товар 3", price: 133 },
+                    { name: "товар 14", price: 632 },
+                    { name: "товар 5", price: 12 },
+                ],
+            };
+        },
+
+        methods: {
+            sortUp() {
+                // this.product.sort((a, b) => (a.price > b.price ? 1 : -1));
+                this.product.sort((a, b) => a.price - b.price);
+            },
+
+            sortDown() {
+                // this.product.sort((a, b) => (a.price > b.price ? 1 : -1)).reverse();
+                this.product.sort((a, b) => b.price - a.price);
+            },
+        },
+
+        template: `
+              <div>
+                <span>отсортировать товар</span>
+                <button @click="sortUp()">по возрастанию</button>
+                <button @click="sortDown()">по убыванию</button>
+                <ul>
+                    <li v-for="item in product" :key="item.id">
+                        {{item.name}} - {{item.price}} руб.
+                    </li>
+                </ul>
+               </div>`,
+    });
+    // Vue.component('filter-list', {
+    //     template: `
+    //       <div>
+    //         <input type="text" v-model="filterItem">
+    //
+    //         <div v-for="item in items">
+    //           {{ item }}
+    //         </div>
+    //
+    //         <p>filtered</p>
+    //         <div v-for="item in filteredItems">
+    //           {{ item }}
+    //         </div>
+    //       </div>`,
+    //     data() {
+    //         return {
+    //             items: ['list 1', 'list 2', 'list 3'],
+    //             filterItem: '',
+    //         };
+    //     },
+    //     computed: {
+    //         filteredItems() {
+    //             return this.items.filter(item => item.includes(this.filterItem));
+    //         }
+    //     },
+    // });
+//     Vue.component('list-item', {
+//         props: ['itemData'],
+//
+//         methods: {
+//             removeItem(id) {
+//                 this.$emit('removeItem', id);
+//             }
+//         },
+//
+//         template: `<div>
+//                     <p>{{ itemData.title }}</p>
+//                     <button @click="removeItem(itemData.id)">X</button>
+//                   </div>`,
+//     });
+//
+//     Vue.component('todo-list', {
+//         props: {  },
+//
+//         data() {
+//             return {
+//                 items: [],
+//                 newItem: '',
+//             }
+//         },
+//
+//         methods: {
+//             add() {
+//                 const newItem = {
+//                   id: Date.now(),
+//                   title: this.newItem,
+//                 };
+//
+//                 this.items.push(newItem);
+//                 this.newItem = '';
+//             },
+//
+//             removeItem(id) {
+//                 this.items = this.items.filter(item => item.id !== id);
+//             }
+//         },
+//
+//         template: `
+//                 <div>
+//                     <h2>Todo List</h2>
+//                     <input type="text" v-model="newItem">
+//                     <button @click="add">Add</button>
+// <!--                    <p v-for="item in items">{{ item }}</p>-->
+//                     <list-item
+//                         v-for="item in items"
+//                         :item-data="item"
+//                         @removeItem="removeItem"
+//                         :key="item.id"
+//                     ></list-item>
+//                 </div>
+//             `
+//     });
+//
+    new Vue({
+        el: '#app',
+        data: {
+
+        }
+    });
+</script>
+</body>
+</html>
