@@ -787,4 +787,238 @@ body {
 
 }
 
+// Страница blog-details.html
+.blog-details {
 
+    &__banner {
+        width: $widthSite;
+        height: 351px;
+        flex-shrink: 0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background: url(../img/content/bannerBlog.jpg), lightgray 50% / cover no-repeat;
+        margin-top: 45px;
+    }
+    
+    &__blog {
+        display: flex;
+        width: $widhtContainer;
+        align-items: flex-start;
+        gap: 52px;
+        margin-top: 200px;
+    }
+
+    &__sidebar {
+        display: flex;
+        width: 345px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        flex-shrink: 0;
+    }
+    &__sidebar-tags {
+        display: flex;
+        width: 345px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        
+    }
+    &__sidebar-title {
+        color: $colorText;
+        font-family: $fontFamilyHead;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 31.25px */
+        letter-spacing: 0.5px;
+    }
+    &__sidebar-content {
+        display: flex;
+        width: 335px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        gap: 11px;
+    }
+    &__sidebar-contentBlock {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    &__sidebar-button {
+        display: flex;
+        padding: 9px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: #F4F0EC;
+        color: $colorText;
+        text-align: center;
+        font-family: $fontFamilyText;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 22.5px */
+        letter-spacing: 0.36px;
+        & input[type="radio"] {
+            display: none;
+        }
+    }
+    &__sidebar-buttonA {
+        background: #292f36;
+        display: none;
+    }
+    &__sidebar-button:hover, &__sidebar-button:active {
+        color: #FFF;
+        background: #292F36;
+    }
+    &__detais {
+        width: 804px;
+    }
+    &__details-content {
+        display: flex;
+        width: 800px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+    }
+    &__details-subcontent {
+        display: flex;
+        width: 800px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 46px;
+    }
+    &__details-subSubcontent {
+        display: flex;
+        width: 799px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+    }
+    &__details-title {
+        color: $colorText;
+        font-family: $fontFamilyHead;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 62.5px */
+        letter-spacing: 1px;
+    }
+    &__details-img {
+        width: 799px;
+        height: 539px;
+        border-radius: 50px;
+        background: #C4C4C4;
+        border-radius: 50px;
+        // background: url(../img/content/PhotoBlog1.png), lightgray 50% / cover no-repeat;
+    }
+    &__details-subcontentDate {
+        display: flex;
+        align-items: center;
+        gap: 409px;
+    }
+    &__details-date, &__details-bradcrumbs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $colorTextSubtitle;
+        font-family: $fontFamilyText;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+    }
+    &__details-text {
+        color: $colorTextSubtitle;
+        font-family: $fontFamilyText;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
+    }
+
+    &__details-quotes {
+        display: flex;
+        width: 799px;
+        padding: 53px 227px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        background: $backgroundColorBlockInfo;
+        margin-top: 35px;
+    }
+    &__details-quotesContent {
+
+        color: $numberColorBlockInfo
+    }
+    &__details-quotesContentText {
+        display: flex;
+        color: $numberColorBlockInfo;
+        text-align: center;
+        font-family: $fontFamilyHead;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 125%; /* 31.25px */
+        letter-spacing: 0.5px;
+    }
+    &__details-quotesContentSymbol {
+        color: $numberColorBlockInfo;
+        text-align: center;
+        font-family: $fontFamilyHead;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 125%; /* 250px */
+        letter-spacing: 4px;
+    }
+    &__details-subcontentPart2 {
+        gap:24;
+        margin-top: 27px;
+    }
+    &__details-points {
+        display: flex;
+        width: 732.389px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    &__details-point {
+        display: flex;
+        width: 732.389px;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    &__details-pointNumber {
+        width: 5.389px;
+        flex-shrink: 0;
+        color: $numberColorBlockInfo;
+        font-family: $fontFamilyHead;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 25px */
+        letter-spacing: 0.4px;
+    }
+    &__details-subSubcontent {
+        display: flex;
+        width: 799px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+    &__details-subSubcontentImg {
+        width: 799px;
+        height: 365px;
+        border-radius: 50px;
+        background: #C4C4C4;
+        background: url(../img/content/PhotoBlog2.png), lightgray 50% / cover no-repeat;                
+    }
+}
