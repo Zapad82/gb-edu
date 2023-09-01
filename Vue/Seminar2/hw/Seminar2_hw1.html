@@ -1,0 +1,54 @@
+<!-- Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div>
+            <label for="sort">Сортировка:</label>
+            <select id="sort" v-model="sortBy">
+                <option value="priceAsc">Цена (по возрастанию)</option>
+                <option value="priceDesc">Цена (по убыванию)</option>
+            </select>
+        </div>
+        <ul>
+            <li v-for="product in sortedProducts" :key="product.name">
+                {{ product.name }} - {{ product.price }}$
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                products: [
+                    { name: "Товар 1", price: 9.99 },
+                    { name: "Товар 2", price: 19.99 },
+                    { name: "Товар 3", price: 4.99 },
+                    { name: "Товар 4", price: 14.99 },
+                    { name: "Товар 5", price: 24.99 }
+                    ],
+                sortBy: "priceAsc"
+            },
+            computed: {
+                sortedProducts() {
+                    if (this.sortBy === "priceAsc") {
+                        return this.products.slice().sort((a, b) => a.price - b.price);
+                    } else if (this.sortBy === "priceDesc") {
+                        return this.products.slice().sort((a, b) => b.price - a.price);
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

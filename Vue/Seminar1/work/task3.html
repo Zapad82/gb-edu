@@ -1,0 +1,49 @@
+<!-- 1. Создать кнопку "Показать еще" при клике на которую появляется контент под кнопкой, при повторном клике, контент необходимо скрыть
+2. Добавить анимацию появления текстового блока. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 3</title>
+    <style>
+        .fade-enter-active, .fade-leave-active {
+          transition: opacity 0.5s;
+        }
+        .fade-enter, .fade-leave-to {
+          opacity: 0;
+        }
+      </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="toggleContent">
+          {{ showContent ? 'Скрыть' : 'Показать еще' }}
+        </button>
+        <transition name="fade">
+            <div v-if="showContent">
+              <!-- Ваш контент здесь -->
+              <p>Дополнительный контент</p>
+            </div>
+        </transition>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+          el: '#app',
+          data: {
+            showContent: false
+          },
+          methods: {
+            toggleContent() {
+              this.showContent = !this.showContent;
+            }
+          }
+        });
+    </script>
+
+
+</body>
+</html>
