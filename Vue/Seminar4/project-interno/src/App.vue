@@ -1033,4 +1033,132 @@ body {
     }
 }
 
+// Страница с проектами
+.projectPage {
+  &__banner{
+    display: flex;
+    height: 356px;
+    width: 1920px;
+    margin-left: 50%;
+    margin-top: 45px;
+    transform: translateX(-50%);
+    // transform: rotate(-90deg);
+    flex-shrink: 0;
+    background: #CDA274;
+    background: url(./assets/img/content/ProjectPhoto1.jpg), lightgray 50% / cover no-repeat;
+  }
+  &__banner-img {
+
+  }
+  &__banner-into {
+    display: flex;
+    width: 504px;
+    padding: 41px 125px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 37px 37px 0px 0px;
+    background: #FFF;
+  }
+  &__projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 61px;
+  }
+  &__categories {
+    display: flex;
+    width: 880px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 18px;
+    border: 1px solid #CDA274;
+    margin-top: 200px;
+    &-content {
+      display: flex;
+      width: 880px;
+      justify-content: center;
+      align-items: center;
+      gap: 96px;
+    }
+    &-button {
+      display: flex;
+      padding-top: 26px;
+      padding-bottom: 26px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 18px;
+      background: #fff;
+      color: #292F36;
+      text-align: center;
+      font-family: Jost;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%; /* 22.5px */
+      letter-spacing: 0.36px;
+    }
+    &-button:hover {
+      display: flex;
+      padding: 26px 66px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 18px;
+      background: #CDA274;
+    }
+    &-button:active:visited {
+      display: flex;
+      padding: 26px 66px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 18px;
+      background: #CDA274;
+    }
+  }
+  &__categories-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+  }
+  &__blocks {
+    display: flex;
+    width: 585px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 25px;
+  }
+  &__projectBlock-text {
+    display: flex;
+    width: 585px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__projectBlock-subContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  &__projectBlock-title {
+    color: #292F36;
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__projectBlock-subTitle {
+    display: flex;
+    height: 27px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 </style>

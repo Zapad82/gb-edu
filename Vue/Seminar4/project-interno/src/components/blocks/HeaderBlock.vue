@@ -33,12 +33,12 @@
             >
               Blog
             </router-link>
-            <a
-              href="#"
+            <router-link
+              to="/project"
               class="header__menu_link"
             >
               Project
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
