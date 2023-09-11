@@ -100,11 +100,11 @@ body {
   &__left {
     display:flex;
     &_block-logo {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
     }
   };
   &__right {
@@ -114,6 +114,7 @@ body {
     display: flex;
       gap: 50px;
       &_link {
+        text-decoration: none;
         color: #292F36;
         text-align: center;
         font-family: 'Jost';
@@ -132,6 +133,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 125%; /* 50px */
+  text-decoration: none;
 }
 
 .banner {
@@ -1159,6 +1161,83 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+// страница ProjectDetails
+.project-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  &__banner {
+    width: 1968px;
+    height: 356px;
+    margin-left: 50%;
+    margin-top: 45px;
+    transform: translateX(-50%);
+    // transform: rotate(-90deg);
+    flex-shrink: 0;
+    background: #CDA274;
+    background: url(assets/img/content/PhotoProjectDetails1.jpg), lightgray 50% / cover no-repeat;
+  }
+  &__text {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  &__content {
+    display: flex;
+    width: 658px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    flex-shrink: 0;
+  }
+  &__title {
+    color: #292F36;
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+  }
+  &__subtitle {
+    color: #4D5053;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__slider {
+    width: 1201px;
+    height: 799px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    background: #C4C4C4;
+  }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
 }
 
 </style>

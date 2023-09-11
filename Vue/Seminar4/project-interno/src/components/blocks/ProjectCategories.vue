@@ -26,44 +26,48 @@
         </div>
         <div class="projectPage__flexbox">
           <div
-          class="projectPage__categories-flex"
-          v-for="article in sortedArray"
-          :key="article.id"
-        >
-          <div
-            class="projectPage__projectBlock"
-            v-for="item in article.arrayCard"
-            :key="item.id"
+            class="projectPage__categories-flex"
+            v-for="article in sortedArray"
+            :key="article.id"
           >
-            <div v-if="item.id" class="projectPage__blocks">
-              <div class="projectPage__projectBlock-img">
-                <img
-                  :src="item.src"
-                  :alt="item.alt"
-                >
-              </div>
-              <div class="projectPage__projectBlock-text">
-                <div class="projectPage__projectBlock-subContent">
-                  <h2 class="projectPage__projectBlock-title">
-                    {{ item.title }}
-                  </h2>
-                  <div class="projectPage__projectBlock-subTitle">
-                    {{ item.breadcrumbs }}
-                  </div>
-                </div>
-                <div class="projectPage__projectBlock-link">
-                  <a
-                    :href="item.linlk"
+            <div
+              class="projectPage__projectBlock"
+              v-for="item in article.arrayCard"
+              :key="item.id"
+            >
+              <div
+                v-if="item.id"
+                class="projectPage__blocks"
+              >
+                <div class="projectPage__projectBlock-img">
+                  <img
+                    :src="item.src"
+                    :alt="item.alt"
                   >
-                    <img
-                      :src="item.linkImg"
+                </div>
+                <div class="projectPage__projectBlock-text">
+                  <div class="projectPage__projectBlock-subContent">
+                    <h2 class="projectPage__projectBlock-title">
+                      {{ item.title }}
+                    </h2>
+                    <div class="projectPage__projectBlock-subTitle">
+                      {{ item.breadcrumbs }}
+                    </div>
+                  </div>
+                  <div class="projectPage__projectBlock-link">
+                    <router-link
+                      :to="item.linlk"
                     >
-                  </a>
+                      <img
+                        :src="item.linkImg"
+                      >
+                    </router-link>
+                  <!-- </a> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <!-- <div
           class="projectPage__categories-flex"
           v-for="article in sortedArray"
@@ -172,7 +176,7 @@ export default {
               alt: 'photo',
               star: imageStar,
               linkImg: imageToRight,
-              linlk: '#'
+              linlk: 'project-details'
             },
             {
               id: '2',
