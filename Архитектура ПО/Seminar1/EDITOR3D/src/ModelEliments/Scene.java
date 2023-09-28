@@ -12,11 +12,11 @@ public class Scene {
         this.flashes = flashes;
     }
 
-    public Object method1(Object Type) {
-        return Type;
-    }
-    
-    public Object method2(Object Type, Object Type2) {
-        return Type2;
+    public <T> T method1(T flash) {
+        return flash;
+        }
+        
+    public <T, E> T method2(T Model, E Flash) {
+        return Model;
     }
 }
