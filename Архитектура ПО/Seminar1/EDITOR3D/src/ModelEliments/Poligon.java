@@ -1,12 +1,19 @@
 package ModelEliments;
 
+import java.util.ArrayList;
 import java.util.List;
-import stuff.Point3D;
+
+import Stuff.Point3D;
 
 public class Poligon {
-    public List<Point3D> points;
+    public List<Point3D> points = new ArrayList<Point3D>();
 
-    public Poligon(List<Point3D> points) {
-        this.points = points;
+    /**
+     * конструктор
+     *
+     * @param point
+     */
+    public Poligon(Point3D point) {
+        points.add(point);
     }
 }
