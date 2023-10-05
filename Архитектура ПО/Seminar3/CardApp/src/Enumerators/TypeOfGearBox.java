@@ -1,8 +1,8 @@
 package Enumerators;
 
-public enum TypeGearBox {
+public enum TypeOfGearBox {
     AVT,
     MT,
-    CVT,
+    VVT,
     RVT,
 }

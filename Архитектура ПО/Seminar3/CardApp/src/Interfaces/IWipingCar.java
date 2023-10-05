@@ -1,6 +1,6 @@
 package Interfaces;
 
-public interface IWippingCar {
+public interface IWipingCar {
 
     public void wipWindShield();
 
