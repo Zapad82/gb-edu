@@ -1,0 +1,197 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Order",
+        "comment": "Таблица заказов",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e70c06c5-5db7-43c0-b062-34efb9b19da4"
+          },
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e1e4a363-bb53-4173-98ae-2ffdf7553e36"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 549,
+          "top": 106,
+          "zIndex": 21,
+          "widthName": 60,
+          "widthComment": 102.78173828125
+        },
+        "visible": true,
+        "id": "2872afc3-279d-40c1-8337-166c73833eab"
+      },
+      {
+        "name": "Product",
+        "comment": "Таблица товаров",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "bf0807d9-3add-446e-931f-b230d82ea36f"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 550,
+          "top": 393,
+          "zIndex": 27,
+          "widthName": 60,
+          "widthComment": 104.97802734375
+        },
+        "visible": true,
+        "id": "c839f539-58c5-4e30-9b63-50620544381c"
+      }
+    ],
+    "indexes": [
+      {
+        "name": "",
+        "columns": [],
+        "unique": false,
+        "id": "988545f5-970b-44cc-91f1-b406c84fb3d7",
+        "tableId": "2872afc3-279d-40c1-8337-166c73833eab"
+      },
+      {
+        "name": "Order",
+        "columns": [],
+        "unique": false,
+        "id": "3422beda-e221-48e7-9d6b-167908b80947",
+        "tableId": "c839f539-58c5-4e30-9b63-50620544381c"
+      }
+    ]
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "2872afc3-279d-40c1-8337-166c73833eab",
+          "columnIds": [
+            "e70c06c5-5db7-43c0-b062-34efb9b19da4"
+          ],
+          "x": 722.5,
+          "y": 216,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "c839f539-58c5-4e30-9b63-50620544381c",
+          "columnIds": [
+            "bf0807d9-3add-446e-931f-b230d82ea36f"
+          ],
+          "x": 723.5,
+          "y": 393,
+          "direction": "top"
+        },
+        "constraintName": "fk_order_to_product",
+        "visible": true,
+        "id": "a2438ed8-9f71-4be8-adad-78c1ddb1ee0c"
+      }
+    ]
+  }
+}
