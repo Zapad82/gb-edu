@@ -11,5 +11,6 @@
     "cSpell.words": [
         "Архитектура"
     ],
-    "dineug.vuerd-vscode.themeSync": true
+    "dineug.vuerd-vscode.themeSync": true,
+    "workbench.colorTheme": "Visual Studio Light"
 }
