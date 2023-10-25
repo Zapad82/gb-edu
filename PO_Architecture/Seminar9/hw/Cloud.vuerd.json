@@ -1,0 +1,1107 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 0.9,
+    "show": {
+      "tableComment": true,
+      "columnComment": false,
+      "columnDataType": true,
+      "columnDefault": false,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Order",
+        "comment": "Заказ",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "in",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a30c8b54-4dc2-4bfd-844f-63db6312f617"
+          },
+          {
+            "name": "customer_id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 72.80810546875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6847c9cf-e209-42ad-b5ae-66949fa64340"
+          },
+          {
+            "name": "cloud_id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b0a7a16a-15df-45d2-9a4b-8ecd30a8e451"
+          },
+          {
+            "name": "ip_addresse_id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 90.17529296875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f02d32aa-9dc6-4d2f-865b-0e63fb3f509a"
+          },
+          {
+            "name": "VM_id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "086ce3eb-1fb8-48fa-81c2-2a8c1100cd0f"
+          },
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9bd1e5dc-ec9a-491f-b28e-86dda01240aa"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 600.0012,
+          "top": 323.667,
+          "zIndex": 497,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944"
+      },
+      {
+        "name": "Customer",
+        "comment": "Клиент",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8e6c7a45-1fe9-41c0-9550-4b64ec15b242"
+          },
+          {
+            "name": "FIO",
+            "comment": "",
+            "dataType": "MEDIUMTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.94091796875,
+              "widthDefault": 60
+            },
+            "id": "4b6e263d-4e2b-469c-bfc7-7f0cbe2e09b4"
+          },
+          {
+            "name": "email",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d2525e76-ad12-4b42-bcf2-cf6646034723"
+          },
+          {
+            "name": "hash_passw",
+            "comment": "",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74.26806640625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "adef886c-ae71-4f0e-af99-ef9b08d43327"
+          },
+          {
+            "name": "address",
+            "comment": "",
+            "dataType": "MEDIUMTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.94091796875,
+              "widthDefault": 60
+            },
+            "id": "4b1f64e9-8f60-416d-833f-c18f8f0dbe29"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 989.0002,
+          "top": 446.332,
+          "zIndex": 467,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "3ad1fc2a-813c-4852-950a-23260b6833cd"
+      },
+      {
+        "name": "Cloud",
+        "comment": "Облако",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "214add3f-eddb-4495-b98f-ac0c9ed56005"
+          },
+          {
+            "name": "RAM",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2c9a5e9f-4df7-4bb8-8e0c-733ae566eb90"
+          },
+          {
+            "name": "RAM_price",
+            "comment": "",
+            "dataType": "DECIMAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66.29541015625,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3e55bf80-0e6a-4756-b106-ea7b2fa5cfd0"
+          },
+          {
+            "name": "CPU",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "47dc80f3-7402-41c2-be68-9b16e5579991"
+          },
+          {
+            "name": "CPU_price",
+            "comment": "",
+            "dataType": "DECIMAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.8544921875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "91e6e0a3-a072-4b59-8e1e-72ad52f816a7"
+          },
+          {
+            "name": "SSD",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b450eb35-78d4-4b6e-ad0f-cd66380f5093"
+          },
+          {
+            "name": "SSD_price",
+            "comment": "",
+            "dataType": "DECIMAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.13720703125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c59c4d66-9984-421d-b813-744436d4933d"
+          },
+          {
+            "name": "GPU",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5f00053a-8097-41d3-8446-e1acbd5cf2c1"
+          },
+          {
+            "name": "GPU_price",
+            "comment": "",
+            "dataType": "DECIMAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.578125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7b7cf73f-af5c-480c-ac53-ba2a46113659"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 611.833,
+          "top": 659.9986,
+          "zIndex": 485,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "c076aecc-7c77-469f-a638-e54fe7166917"
+      },
+      {
+        "name": "Servers",
+        "comment": "Сервер",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e93f11af-b485-4ad2-bae5-61c5f1cdaf21"
+          },
+          {
+            "name": "name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c1e70b22-a205-4bf2-857b-2f859d82ff79"
+          },
+          {
+            "name": "location",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4933d2ec-ee9f-4a66-a69c-b00810aac900"
+          },
+          {
+            "name": "CPU",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b2081a02-482b-4fad-be47-822eaef4477c"
+          },
+          {
+            "name": "GPU",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "afb568b6-42ba-4ef1-9587-970b0a3dc4c6"
+          },
+          {
+            "name": "RAM",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "73a0aac1-69db-4dc2-a6fc-1c194b6a4079"
+          },
+          {
+            "name": "SSD",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5e5cb335-972b-48e5-9834-efbdd75a747e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 19.8337,
+          "top": 456.5185,
+          "zIndex": 483,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "e9fa8563-b3b5-40c7-82cb-6d31a7052e37"
+      },
+      {
+        "name": "ip_addresses",
+        "comment": "IP адрес",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6980862e-a677-470a-853b-f1adcae1b00e"
+          },
+          {
+            "name": "version",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "af93d31d-0027-41ca-b498-ba5b508e8d8c"
+          },
+          {
+            "name": "ip_addresse",
+            "comment": "",
+            "dataType": "BIGINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72.8271484375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8237a421-cc96-4276-adea-4a4ba38801f0"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 17.9999,
+          "top": 268.8888,
+          "zIndex": 494,
+          "widthName": 79.3271484375,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "747c9f9a-a2c9-4902-b274-1c02454b8371"
+      },
+      {
+        "name": "VM",
+        "comment": "Виртуальная машина",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a4126271-5395-49e3-95c7-10646de82d9b"
+          },
+          {
+            "name": "name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5a5da97c-7930-4e2c-ba01-aae428e24ae6"
+          },
+          {
+            "name": "version",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8f3b3b2a-ffa8-433a-90dd-dd1e112b8508"
+          },
+          {
+            "name": "description",
+            "comment": "",
+            "dataType": "LONGTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.8671875,
+              "widthComment": 60,
+              "widthDataType": 72.0654296875,
+              "widthDefault": 60
+            },
+            "id": "22243b2e-76a4-4e96-8bf0-a07dd4a8f700"
+          },
+          {
+            "name": "price",
+            "comment": "",
+            "dataType": "DECIMAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "774e6daa-6eb3-4c86-9c8a-bcc7e10534de"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 161.5003,
+          "top": 707.4999,
+          "zIndex": 486,
+          "widthName": 60,
+          "widthComment": 120
+        },
+        "visible": true,
+        "id": "c19b806a-d07e-465f-beb4-da1af860f0df"
+      }
+    ],
+    "indexes": [
+      {
+        "name": "",
+        "columns": [],
+        "unique": false,
+        "id": "63e5f4fb-38d7-4f3c-a9da-0907574bd0cf",
+        "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944"
+      }
+    ]
+  },
+  "memo": {
+    "memos": [
+      {
+        "value": "ERD для покупки облачных ресурсов",
+        "ui": {
+          "active": false,
+          "left": 23.33333333333333,
+          "top": 68.0555555555556,
+          "zIndex": 499,
+          "width": 127,
+          "height": 100
+        },
+        "id": "f4b225e5-4509-4dce-8a3d-84727cfb0452"
+      }
+    ]
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3ad1fc2a-813c-4852-950a-23260b6833cd",
+          "columnIds": [
+            "8e6c7a45-1fe9-41c0-9550-4b64ec15b242"
+          ],
+          "x": 989.0002,
+          "y": 532.082,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944",
+          "columnIds": [
+            "6847c9cf-e209-42ad-b5ae-66949fa64340"
+          ],
+          "x": 847.17649296875,
+          "y": 419.667,
+          "direction": "right"
+        },
+        "constraintName": "fk_customer_to_order",
+        "visible": true,
+        "id": "77339105-236a-4200-8bee-333856ec24f9"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c076aecc-7c77-469f-a638-e54fe7166917",
+          "columnIds": [
+            "214add3f-eddb-4495-b98f-ac0c9ed56005"
+          ],
+          "x": 723.480705078125,
+          "y": 659.9986,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944",
+          "columnIds": [
+            "b0a7a16a-15df-45d2-9a4b-8ecd30a8e451"
+          ],
+          "x": 723.588846484375,
+          "y": 515.6669999999999,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_cloud_to_order",
+        "visible": true,
+        "id": "fbafc215-52ec-4492-b407-c657faf3fb7b"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "747c9f9a-a2c9-4902-b274-1c02454b8371",
+          "columnIds": [
+            "6980862e-a677-470a-853b-f1adcae1b00e"
+          ],
+          "x": 247.8270484375,
+          "y": 334.1388,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944",
+          "columnIds": [
+            "f02d32aa-9dc6-4d2f-865b-0e63fb3f509a"
+          ],
+          "x": 600.0012,
+          "y": 355.667,
+          "direction": "left"
+        },
+        "constraintName": "fk_ip_addresse_to_order",
+        "visible": true,
+        "id": "29ed646b-9379-4b23-9633-39ffcdd4a983"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "c19b806a-d07e-465f-beb4-da1af860f0df",
+          "columnIds": [
+            "a4126271-5395-49e3-95c7-10646de82d9b"
+          ],
+          "x": 395.43291718750004,
+          "y": 793.2499,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944",
+          "columnIds": [
+            "086ce3eb-1fb8-48fa-81c2-2a8c1100cd0f"
+          ],
+          "x": 600.0012,
+          "y": 483.667,
+          "direction": "left"
+        },
+        "constraintName": "fk_vm_to_order",
+        "visible": true,
+        "id": "ad356444-3e7c-46a4-bb17-87b3a58a6325"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "e9fa8563-b3b5-40c7-82cb-6d31a7052e37",
+          "columnIds": [
+            "e93f11af-b485-4ad2-bae5-61c5f1cdaf21"
+          ],
+          "x": 236.8337,
+          "y": 562.7685,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "4807e8ea-93cb-4c69-9a14-9dc5cd1f6944",
+          "columnIds": [
+            "9bd1e5dc-ec9a-491f-b28e-86dda01240aa"
+          ],
+          "x": 600.0012,
+          "y": 419.667,
+          "direction": "left"
+        },
+        "constraintName": "fk_servers_to_order",
+        "visible": true,
+        "id": "3af2b3da-f064-47e4-84cc-55ffb80f135c"
+      }
+    ]
+  }
+}
