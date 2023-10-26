@@ -53,7 +53,7 @@ paths:
       summary: Метод получения заказа на облако по ID
       tags:
         - Clouds
-      operationId: deleteCloudById
+      operationId: getCloudById
       parameters:
         - name: cloud_id
           in: path
@@ -85,7 +85,7 @@ paths:
       summary: Метод удаления заказа с облака по ID
       tags:
         - Clouds
-      operationId: getCloudById
+      operationId: deleteCloudById
       parameters:
         - name: cloud_id
           in: path
