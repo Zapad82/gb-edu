@@ -173,7 +173,41 @@ paths:
           description: Group not found
         '405':
           description: Validation exception
-          
+    post:
+      tags:
+        - Group
+      summary: Добавить группу
+      description: Добавить группу
+      operationId: createGroup
+      requestBody:
+        description: Добавить новую группу
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Group'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Group'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Group not found
+        '405':
+          description: Validation exception        
           
    
   /Group/findById/{groupId}:
@@ -230,67 +264,7 @@ paths:
       responses:
         '400':
           description: Invalid Group value
-    /Group/deleteById/{groupId}: 
-    post:
-      tags:
-        - Group
-      summary: Добавить группу
-      description: Добавить группу в базу
-      operationId: addGroup
-      requestBody:
-        description: Создание новой группы в базе
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Group'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/Group'
-          application/x-www-form-urlencoded:
-            schema:
-              $ref: '#/components/schemas/Group'
-        required: true
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Group'          
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Group'
-        '405':
-          description: Invalid input
   /Robot:
-    get:
-      tags:
-        - Robot
-      summary: Найти робота по ID
-      description: вернуть одного робота
-      operationId: getRobotById
-      parameters:
-        - name: robotId
-          in: path
-          description: Идентификатор робота
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Robot'          
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Robot'
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: User not found
     put:
       tags:
         - Robot
@@ -359,7 +333,26 @@ paths:
         '405':
           description: Invalid input
  
-  /User/deleteById/{robotId}:      
+  /Robot/robotById/{robotId}:
+    get:
+      tags:
+        - Robot
+      summary: Поиск робота по ID
+      description: Поиск робота в базе данных
+      operationId: getRobotId
+      parameters:
+        - name: robotId
+          in: path
+          description: robotID - идентификатор робота-пылесоса
+          required: true
+          schema:
+            type: string
+            format: int64
+      responses:
+        '400':
+          description: Invalid Robot value    
+ 
+  /Robot/deleteById/{robotId}:      
     delete:
       tags:
         - Robot
@@ -381,8 +374,20 @@ paths:
             type: integer
             format: int64
       responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Robot'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Robot'
         '400':
-          description: Invalid Robot value
+          description: Invalid ID supplied
+        '404':
+          description: Robot not found 
+          
   /Schedule:
     put:
       tags:
@@ -480,13 +485,13 @@ paths:
           description: Invalid ID supplied
         '404':
           description: Schedule not found
-  /Schedule/deleteById/{Id}:  
+  /Schedule/deleteById/{Id}:      
     delete:
       tags:
         - Schedule
-      summary: Удаляет расписание
-      description: Удаляет расписание
-      operationId: deleteSchedule
+      summary: Удалить расписание по ID
+      description: Удалить расписание
+      operationId: deleteScheduleId
       parameters:
         - name: Id
           in: path
@@ -510,7 +515,6 @@ paths:
         '404':
           description: Schedule not found
 
-   
 components:
   schemas:
   
