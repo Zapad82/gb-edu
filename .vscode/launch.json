@@ -2,31 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CalculatorTest",
+            "request": "launch",
+            "mainClass": "seminars.first.Calculator.CalculatorTest",
+            "projectName": "Repo_GB_GitHub_f31f50b1"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "Repo_GB_GitHub_f31f50b1"
+            "projectName": "Repo_GB_GitHub_f31f50b1",
+            "vmArgs": "-enableasserions"
         },
         {
             "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "PO_Architecture.Seminar4.HomeWork4DZ.src.Main",
-            "projectName": "Repo_GB_GitHub_f31f50b1"
+            "projectName": "Repo_GB_GitHub_f31f50b1",
+            "vmArgs": "-enableasserions"
         },
         {
             "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "Repo_GB_GitHub_f31f50b1"
+            "projectName": "Repo_GB_GitHub_f31f50b1",
+            "vmArgs": "-enableasserions"
         },
         {
             "type": "java",
             "name": "Run with AppMap",
             "request": "launch",
             "mainClass": "",
-            "vmArgs": "-javaagent:${userHome}\\.appmap\\lib\\java\\appmap.jar"
+            "vmArgs": "-enableasserions"
         }
     ]
 }

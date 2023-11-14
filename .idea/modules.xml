@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ExceptionsAndErrors/ExceptionsAndErrors.iml" filepath="$PROJECT_DIR$/ExceptionsAndErrors/ExceptionsAndErrors.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Practice_temp/Practice_temp.iml" filepath="$PROJECT_DIR$/Practice_temp/Practice_temp.iml" />
       <module fileurl="file://$PROJECT_DIR$/Repo_GB_GitHub.iml" filepath="$PROJECT_DIR$/Repo_GB_GitHub.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Practice_temp/practice_temp-master/practice_temp-master.iml" filepath="$PROJECT_DIR$/Practice_temp/practice_temp-master/practice_temp-master.iml" />
     </modules>
   </component>
 </project>
