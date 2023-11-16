@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="unit-tests-2 (Код семинара)">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Unit-tests/Seminar2/unit-tests-2 (Код семинара)/unit-tests-2 (Код семинара)" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/Unit-tests/Seminar2/unit-tests-2 (Код семинара)/unit-tests-2 (Код семинара)/Test" />
+      <root url="file://$PROJECT_DIR$/Unit-tests/Seminar2/unit-tests-2 (Код семинара)/unit-tests-2 (Код семинара)/src" />
+    </SOURCES>
+  </library>
+</component>

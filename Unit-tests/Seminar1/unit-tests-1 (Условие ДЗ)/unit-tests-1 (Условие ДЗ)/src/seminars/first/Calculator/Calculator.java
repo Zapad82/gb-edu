@@ -1,4 +1,5 @@
-package seminars.first.Calculator;
+package first.Calculator;
+import static org.assertj.core.api.Assertions.*;
 
 public class Calculator {
     private static int number;
