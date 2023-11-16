@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02">
+      <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Seminar2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02" />
+    </content>
     <orderEntry type="jdk" jdkName="IntelliJ IDEA Community Edition IC-232.10227.8" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="assertj-core-3.23.1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/junit-platform-commons-1.9.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/junit-jupiter-api-5.9.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="junit-platform-commons-1.9.1" level="project" />
+    <orderEntry type="library" name="junit-jupiter-api-5.9.1" level="project" />
+    <orderEntry type="library" name="mockito-core-5.7.0 (2)" level="project" />
   </component>
 </module>
