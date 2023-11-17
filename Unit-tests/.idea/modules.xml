@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Seminar2/Seminar2.iml" filepath="$PROJECT_DIR$/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Seminar2/Seminar2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar3/Seminar3.iml" filepath="$PROJECT_DIR$/Seminar3/Seminar3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Unit-tests.iml" filepath="$PROJECT_DIR$/Unit-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar1/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ).iml" filepath="$PROJECT_DIR$/Seminar1/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar1/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ)/src/unit-tests-1 (Условие ДЗ)1.iml" filepath="$PROJECT_DIR$/Seminar1/unit-tests-1 (Условие ДЗ)/unit-tests-1 (Условие ДЗ)/src/unit-tests-1 (Условие ДЗ)1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar2/unit-tests-2 (Код семинара)/unit-tests-2 (Код семинара).iml" filepath="$PROJECT_DIR$/Seminar2/unit-tests-2 (Код семинара)/unit-tests-2 (Код семинара).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar3/unit-tests-3/unit-tests-3.iml" filepath="$PROJECT_DIR$/Seminar3/unit-tests-3/unit-tests-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar2/unit-tests-lesson02/unit-tests-lesson02/unit-tests-lesson02.iml" filepath="$PROJECT_DIR$/Seminar2/unit-tests-lesson02/unit-tests-lesson02/unit-tests-lesson02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar3/unit-tests-3/untitled/untitled.iml" filepath="$PROJECT_DIR$/Seminar3/unit-tests-3/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
