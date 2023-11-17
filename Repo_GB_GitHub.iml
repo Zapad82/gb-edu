@@ -6,7 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Seminar2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/Test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02/src" isTestSource="false" />
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/Unit-tests/Seminar2/unit-tests-lesson02/unit-tests-lesson02" />
+=======
+>>>>>>> 01d2c745626aac3c530c3d8989621351857f0c66
     </content>
     <orderEntry type="jdk" jdkName="IntelliJ IDEA Community Edition IC-232.10227.8" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -31,6 +34,9 @@
     </orderEntry>
     <orderEntry type="library" name="junit-platform-commons-1.9.1" level="project" />
     <orderEntry type="library" name="junit-jupiter-api-5.9.1" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" name="mockito-core-5.7.0 (2)" level="project" />
+=======
+>>>>>>> 01d2c745626aac3c530c3d8989621351857f0c66
   </component>
 </module>
