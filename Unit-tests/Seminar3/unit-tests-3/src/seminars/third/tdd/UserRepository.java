@@ -6,10 +6,10 @@ import java.util.List;
 public class UserRepository {
 
     // Тут можно хранить аутентифицированных пользователей
-    List<User> data = new ArrayList<>();
+    private List<User> data = new ArrayList<>();
 
     public void addUser(User user) {
-       //..
+        data.add(user); // добавление юзера
     }
 
     public boolean findByName(String username) {
@@ -20,5 +20,14 @@ public class UserRepository {
         }
         return false;
     }
+
+    public void logoutAllUsersExceptAdmin() {
+        for (User user : data) {
+            if (!user.isAdmin()) {
+                user.logout();
+            }
+        }
+    }
+
 
 }
