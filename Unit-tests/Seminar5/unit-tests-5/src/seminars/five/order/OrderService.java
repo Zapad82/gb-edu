@@ -1,5 +1,11 @@
 package seminars.five.order;
 
+//
+//У вас есть сервис по обработке заказов, состоящий из двух классов: OrderService и
+//        PaymentService. Класс OrderService обрабатывает заказы и делает вызовы к
+//        PaymentService для обработки платежей. Ваша задача - написать интеграционный тест,
+//        который проверяет, что OrderService и PaymentService взаимодействуют корректно
+
 public class OrderService {
     private final PaymentService paymentService;
 
