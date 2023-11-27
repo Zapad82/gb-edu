@@ -32,3 +32,5 @@ if __name__ == '__main__':
     # 9
     # prime = Tasks.is_prime(7)
     # print(prime)
+
+    {}
