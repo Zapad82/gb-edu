@@ -1,0 +1,83 @@
+
+image: busybox:latest
+
+stages:
+  - build
+  - test
+  - deploy
+variables:
+  IMAGE_TAG: $CI_COMMIT_BRANCH-$CI_SHORT_SHA
+
+cache:
+  key:
+    files:
+      - composer.lock
+  paths:
+    - vendor/
+
+build1:
+  stage: build
+  script:
+    - echo "Do your build here"
+    - echo one >> file1.txt
+    - mkdir -p vendor/
+    - echo "build" > vendor/hello.txt
+    # - sleep 60
+
+docker build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - docker login -u $GITLAB_CI_USER -p $GITLAB_CI_PASSWORD $CI_REGISTRY
+    - echo $GITLAB_CI_USER $GITLAB_CI_PASSWORD $CI_REGISTRY $CI_REGISTRY_IMAGE:$IMAGE_TAG
+    - docker build -t $CI_REGISTRY_IMAGE:$IMAGE_TAG .
+    - docker push $CI_REGISTRY_IMAGE:$IMAGE_TAG
+test1:
+  stage: test
+  script:
+    - echo "Do a test here"
+    - echo "For example run a test suite"
+#    - grep one file1.txt
+    # - sleep 30
+    - cat vendor/hello.txt
+
+test2:
+  stage: test
+  script:
+    - echo "Do another parallel test here"
+    - echo "For example run a lint test"
+    # - grep one file1.txt
+
+test_docker:
+  stage: test
+  image: docker:stable
+
+  before_script:
+    - docker info
+
+  script:
+    - docker build -t test_image .
+    - docker run test_image npm test
+
+deploy1:
+  stage: deploy
+  script:
+    - echo "Do your deploy here"
+  environment: production
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp file1.txt public/index.html
+    - echo 404 >> public/404.html
+  artifacts:
+    paths:
+      - public
+    exclude:
+      - public/file1.txt
+      - public/404.html
+  only:
+    - main
