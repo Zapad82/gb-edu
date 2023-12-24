@@ -18,7 +18,7 @@
 
 
 // Создаем объект "Музыкальная коллекция"
-let musicCollection = {
+const musicCollection = {
   albums: [
     {
       title: "Звезда по имени Солнце",
