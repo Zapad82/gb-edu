@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    /* Add your CSS styles here */
+    .error {
+      color: red;
+    }
+  </style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="1.js" defer></script>
   <script src="2.js" defer></script>
+
+  <div id="products">
+    <!-- Product: Apple iPhone 13 -->
+    <div class="product">
+      <h2>Apple iPhone 13</h2>
+      <ul class="reviews" id="reviews_Apple_iPhone_13">
+        <!-- Reviews will be added here dynamically -->
+      </ul>
+      <form id="reviewForm_Apple_iPhone_13">
+        <input type="text" id="reviewInput_Apple_iPhone_13" placeholder="Оставить отзыв (от 50 до 500 символов)">
+        <button type="submit">Добавить отзыв</button>
+        <p id="error_Apple_iPhone_13" class="error"></p>
+      </form>
+    </div>
+    
+    <!-- Product: Samsung Galaxy Z Fold 3 -->
+    <div class="product">
+      <h2>Samsung Galaxy Z Fold 3</h2>
+      <ul class="reviews" id="reviews_Samsung_Galaxy_Z_Fold_3">
+        <!-- Reviews will be added here dynamically -->
+      </ul>
+      <form id="reviewForm_Samsung_Galaxy_Z_Fold_3">
+        <input type="text" id="reviewInput_Samsung_Galaxy_Z_Fold_3" placeholder="Оставить отзыв (от 50 до 500 символов)">
+        <button type="submit">Добавить отзыв</button>
+        <p id="error_Samsung_Galaxy_Z_Fold_3" class="error"></p>
+      </form>
+    </div>
+
+    <!-- Product: Sony PlayStation 5 -->
+    <div class="product">
+      <h2>Sony PlayStation 5</h2>
+      <ul class="reviews" id="reviews_Sony_PlayStation_5">
+        <!-- Reviews will be added here dynamically -->
+      </ul>
+      <form id="reviewForm_Sony_PlayStation_5">
+        <input type="text" id="reviewInput_Sony_PlayStation_5" placeholder="Leave a review (50 to 500 characters)">
+        <button type="submit">Добавить отзыв</button>
+        <p id="error_Sony_PlayStation_5" class="error"></p>
+      </form>
+    </div>
+  </div>
 </head>
 <body>
   

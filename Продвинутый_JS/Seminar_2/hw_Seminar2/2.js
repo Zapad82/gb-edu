@@ -57,3 +57,51 @@ const initialData = [
     ],
   },
 ];
+
+    // Функция добавления отзывов из InitialData
+    function addInitialReviews(product, reviews) {
+      const reviewsList = document.getElementById(`reviews_${product}`);
+      reviews.forEach(review => {
+        const li = document.createElement('li');
+        li.textContent = review.text;
+        reviewsList.appendChild(li);
+      });
+    }
+
+    // Добавление первоначальных отзывывов при загрузке страницы.
+    initialData.forEach(data => {
+      addInitialReviews(data.product.split(' ').join('_'), data.reviews);
+    });
+
+    // Здесь должен находиться ваш код JavaScript для добавления отзывов и обработки отправки форм.
+    function addReview(product) {
+      const input = document.getElementById(`reviewInput_${product}`);
+      const error = document.getElementById(`error_${product}`);
+
+      if (input.value.length < 50 || input.value.length > 500) {
+        error.textContent = "Отзыв должен быть от 50 до 500 символов."; // Отображение сообщения об ошибке
+      } else {
+        error.textContent = ""; // Очистить сообщение об ошибке
+        const reviewsList = document.getElementById(`reviews_${product}`);
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        reviewsList.appendChild(li); // Добавляем отзыв в список
+        input.value = "";
+      }
+    }
+
+    // Прослушиватели событий для отправки формы
+    document.getElementById('reviewForm_Apple_iPhone_13').addEventListener('submit', function(event) {
+      event.preventDefault();
+      addReview('Apple_iPhone_13');
+    });
+
+    document.getElementById('reviewForm_Samsung_Galaxy_Z_Fold_3').addEventListener('submit', function(event) {
+      event.preventDefault();
+      addReview('Samsung_Galaxy_Z_Fold_3');
+    });
+
+    document.getElementById('reviewForm_Sony_PlayStation_5').addEventListener('submit', function(event) {
+      event.preventDefault();
+      addReview('Sony_PlayStation_5');
+    });
