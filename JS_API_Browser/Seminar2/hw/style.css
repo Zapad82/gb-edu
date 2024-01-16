@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.slider-container {
+  text-align: center;
+  position: relative;
+  max-height: 900px;
+}
+
+.slider-image {
+  margin: 20px auto;
+  height: auto;
+}
+
+img {
+  max-width: 70%;
+  border-radius: 10px;
+}
+
+
+/* Стили для кнопок */
+button {
+  background-color: #4CAF50; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 10px 20px; /* Внутренние отступы */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Скругляем углы */
+  cursor: pointer; /* Изменяем курсор при наведении */
+  transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+button:hover {
+  background-color: #45a049; /* Изменяем цвет фона при наведении */
+}
+
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer; /* добавим курсор при наведении для точек */
+}
+
+.dot.active {
+  background-color: #4CAF50;
+}
+
